@@ -2,6 +2,7 @@ package com.halconbit.challenge.java;
 
 import com.halconbit.challenge.java.backtracking.arrayPermutation.Duplicate.ArrayDuplicates;
 import com.halconbit.challenge.java.backtracking.arrayPermutation.Unique.Unique;
+import com.halconbit.challenge.java.backtracking.combinations.Combinations;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
@@ -26,6 +27,7 @@ public class index {
         PowerSetsUnique    powerSetsUnique    = new PowerSetsUnique();
         PowerSetsDuplicate powerSetsDuplicate = new PowerSetsDuplicate();
         SubSetsSum         subSetsSum         = new SubSetsSum();
+        Combinations       combinations       = new Combinations();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -98,6 +100,14 @@ public class index {
         arrayList = subSetsSum.subsetSums(arrayList_A, 2);
         for(int i = 0; i < arrayList.size(); i++) {
             System.out.println(arrayList.get(i));
+        }
+        
+        System.out.println("================");        
+        System.out.println("COMBINATIONS");
+        
+        listToList = combinations.combine(4, 2);
+        for(int i = 0; i < listToList.size(); i++) {
+            System.out.println(listToList.get(i));
         }
     }
     
