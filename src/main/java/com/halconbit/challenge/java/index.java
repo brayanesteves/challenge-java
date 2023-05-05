@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsD
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
 import com.halconbit.challenge.java.backtracking.stringPermutation.NoDuplicates.NoDuplicates;
+import com.halconbit.challenge.java.backtracking.subsetsSum.SubSetsSum;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,14 +25,21 @@ public class index {
         ArrayDuplicates    arrayUnique        = new ArrayDuplicates();
         PowerSetsUnique    powerSetsUnique    = new PowerSetsUnique();
         PowerSetsDuplicate powerSetsDuplicate = new PowerSetsDuplicate();
+        SubSetsSum         subSetsSum         = new SubSetsSum();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
         int[] numsB                    = {1, 1, 2};
         int[] numsC                    = {1, 2, 3};
         int[] numsD                    = {1, 2, 2};
+        
+        ArrayList<Integer> arrayList_A = new ArrayList<>();
+        arrayList_A.add(2);
+        arrayList_A.add(3);        
+        
         List<String> list              = new ArrayList<>();
         List<List<Integer>> listToList = new ArrayList<>();
+        ArrayList<Integer> arrayList   = new ArrayList<>();
         
         System.out.println("NO DUPLICATES");
         System.out.println("================");
@@ -82,6 +90,14 @@ public class index {
         listToList = powerSetsDuplicate.subsetsWithDup(numsD);
         for(int i = 0; i < listToList.size(); i++) {
             System.out.println(listToList.get(i));
+        }
+        
+        System.out.println("================");        
+        System.out.println("SUBSETS SUM");
+        
+        arrayList = subSetsSum.subsetSums(arrayList_A, 2);
+        for(int i = 0; i < arrayList.size(); i++) {
+            System.out.println(arrayList.get(i));
         }
     }
     
