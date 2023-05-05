@@ -1,6 +1,7 @@
-package com.halconbit.challenge.java.backtracking.stringPermutation;
+package com.halconbit.challenge.java.backtracking.stringPermutation.NoDuplicates;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public class NoDuplicates {
     
-    public static void dfs(String str, String perm, List<String> list) {
+    private void dfs(String str, String perm, List<String> list) {
         if(str.length() == 0) {
             list.add(perm);
         }
@@ -19,15 +20,16 @@ public class NoDuplicates {
             dfs(tmp, perm + ch, list);            
         }
     }
-   
-    public static void main(String[] args) {
-        String str = "abc";
+    
+    public List<String> find_permutation(String string) {
+        char[] arr = string.toCharArray();
+        Arrays.sort(arr);
+        String str = new String(arr);
+        
         List<String> list = new ArrayList<>();
         dfs(str, "", list);
-        
-        for(String s : list) {
-            System.out.println(s);
-        }
+        return list;
     }
+    
     
 }
