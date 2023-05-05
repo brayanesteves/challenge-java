@@ -1,5 +1,6 @@
 package com.halconbit.challenge.java;
 
+import com.halconbit.challenge.java.backtracking.arrayPermutation.Unique.Unique;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
 import com.halconbit.challenge.java.backtracking.stringPermutation.NoDuplicates.NoDuplicates;
 import java.util.ArrayList;
@@ -36,6 +37,13 @@ public class index {
             System.out.println(s);
         }
         System.out.println("================");
+        Unique unique = new Unique();
+        List<List<Integer>> listUnique = new ArrayList<>();
+        int[] nums = {1, 2, 3};
+        listUnique = unique.permute(nums);
+        for(int i = 0; i < listUnique.size(); i++) {
+            System.out.println(listUnique.get(i));
+        }
     }
     
 }
