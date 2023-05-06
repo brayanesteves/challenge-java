@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  *
- * @author brayan
+ * @author Brayan Esteves
  */
 public class CombinationsSum_3 {
     private void dfs(List<List<Integer>> list, List<Integer> comb, int targetSum, int size, int start, int currentSum) {
