@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.backtracking.combinations.Combinations;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_1;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_2;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_3;
+import com.halconbit.challenge.java.backtracking.generateParentheses.GenerateParentheses;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
@@ -23,17 +24,18 @@ public class index {
     
     public static void main(String[] args) {
         
-        NoDuplicates       noDuplicates       = new NoDuplicates();
-        Duplicates         duplicates         = new Duplicates();
-        Unique             unique             = new Unique();
-        ArrayDuplicates    arrayUnique        = new ArrayDuplicates();
-        PowerSetsUnique    powerSetsUnique    = new PowerSetsUnique();
-        PowerSetsDuplicate powerSetsDuplicate = new PowerSetsDuplicate();
-        SubSetsSum         subSetsSum         = new SubSetsSum();
-        Combinations       combinations       = new Combinations();
-        CombinationsSum_1  combinationsSum_1  = new CombinationsSum_1();
-        CombinationsSum_2  combinationsSum_2  = new CombinationsSum_2();
-        CombinationsSum_3  combinationsSum_3  = new CombinationsSum_3();
+        NoDuplicates        noDuplicates        = new NoDuplicates();
+        Duplicates          duplicates          = new Duplicates();
+        Unique              unique              = new Unique();
+        ArrayDuplicates     arrayUnique         = new ArrayDuplicates();
+        PowerSetsUnique     powerSetsUnique     = new PowerSetsUnique();
+        PowerSetsDuplicate  powerSetsDuplicate  = new PowerSetsDuplicate();
+        SubSetsSum          subSetsSum          = new SubSetsSum();
+        Combinations        combinations        = new Combinations();
+        CombinationsSum_1   combinationsSum_1   = new CombinationsSum_1();
+        CombinationsSum_2   combinationsSum_2   = new CombinationsSum_2();
+        CombinationsSum_3   combinationsSum_3   = new CombinationsSum_3();
+        GenerateParentheses generateParentheses = new GenerateParentheses();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -140,6 +142,14 @@ public class index {
         listToList = combinationsSum_3.combinationSum(3, 7);
         for(int i = 0; i < listToList.size(); i++) {
             System.out.println(listToList.get(i));
+        }
+        
+        System.out.println("================");        
+        System.out.println("GENERATE PARENTHESES");
+        
+        list = generateParentheses.generateParentheses(3);
+        for(int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
     }
     
