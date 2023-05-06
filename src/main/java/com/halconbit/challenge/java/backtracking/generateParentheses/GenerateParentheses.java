@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Equations:
+ * TC: O(4^n), SC: O(2n)
  * @author Brayan Eseteves
  */
 public class GenerateParentheses {
