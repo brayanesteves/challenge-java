@@ -4,6 +4,7 @@ import com.halconbit.challenge.java.backtracking.arrayPermutation.Duplicate.Arra
 import com.halconbit.challenge.java.backtracking.arrayPermutation.Unique.Unique;
 import com.halconbit.challenge.java.backtracking.combinations.Combinations;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_1;
+import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_2;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
@@ -30,6 +31,7 @@ public class index {
         SubSetsSum         subSetsSum         = new SubSetsSum();
         Combinations       combinations       = new Combinations();
         CombinationsSum_1  combinationsSum_1  = new CombinationsSum_1();
+        CombinationsSum_2  combinationsSum_2  = new CombinationsSum_2();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -37,6 +39,7 @@ public class index {
         int[] numsC                    = {1, 2, 3};
         int[] numsD                    = {1, 2, 2};
         int[] numsE                    = {2, 3, 6, 7};
+        int[] numsF                    = {10, 1, 2, 7, 6, 1, 5};
         
         ArrayList<Integer> arrayList_A = new ArrayList<>();
         arrayList_A.add(2);
@@ -117,6 +120,14 @@ public class index {
         System.out.println("COMBINATIONS SUM 1");
         
         listToList = combinationsSum_1.combinationSum(numsE, 7);
+        for(int i = 0; i < listToList.size(); i++) {
+            System.out.println(listToList.get(i));
+        }
+        
+        System.out.println("================");        
+        System.out.println("COMBINATIONS SUM 2");
+        
+        listToList = combinationsSum_2.combinationSum(numsF, 8);
         for(int i = 0; i < listToList.size(); i++) {
             System.out.println(listToList.get(i));
         }
