@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * Equations:
- * TC: O(4^n), SC: O(2n)
+ * TC: O(4^n), SC: O(n)
  * @author Brayan Eseteves
  */
 public class GenerateParentheses {
