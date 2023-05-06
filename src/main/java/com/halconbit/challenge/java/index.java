@@ -5,6 +5,7 @@ import com.halconbit.challenge.java.backtracking.arrayPermutation.Unique.Unique;
 import com.halconbit.challenge.java.backtracking.combinations.Combinations;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_1;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_2;
+import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_3;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
@@ -32,6 +33,7 @@ public class index {
         Combinations       combinations       = new Combinations();
         CombinationsSum_1  combinationsSum_1  = new CombinationsSum_1();
         CombinationsSum_2  combinationsSum_2  = new CombinationsSum_2();
+        CombinationsSum_3  combinationsSum_3  = new CombinationsSum_3();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -128,6 +130,14 @@ public class index {
         System.out.println("COMBINATIONS SUM 2");
         
         listToList = combinationsSum_2.combinationSum(numsF, 8);
+        for(int i = 0; i < listToList.size(); i++) {
+            System.out.println(listToList.get(i));
+        }
+        
+        System.out.println("================");        
+        System.out.println("COMBINATIONS SUM 3");
+        
+        listToList = combinationsSum_3.combinationSum(3, 7);
         for(int i = 0; i < listToList.size(); i++) {
             System.out.println(listToList.get(i));
         }
