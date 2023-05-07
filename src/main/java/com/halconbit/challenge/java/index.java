@@ -11,6 +11,7 @@ import com.halconbit.challenge.java.backtracking.letterCombinationsOfAPhoneNumbe
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.restoreIPAddresses.RestoreIPAddresses;
+import com.halconbit.challenge.java.backtracking.splittingAStringIntoDescendingConsecutiveValues.SplittingAStringIntoDescendingConsecutiveValues;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
 import com.halconbit.challenge.java.backtracking.stringPermutation.NoDuplicates.NoDuplicates;
 import com.halconbit.challenge.java.backtracking.subsetsSum.SubSetsSum;
@@ -26,20 +27,21 @@ public class index {
     
     public static void main(String[] args) {
         
-        NoDuplicates                     noDuplicates                     = new NoDuplicates();
-        Duplicates                       duplicates                       = new Duplicates();
-        Unique                           unique                           = new Unique();
-        ArrayDuplicates                  arrayUnique                      = new ArrayDuplicates();
-        PowerSetsUnique                  powerSetsUnique                  = new PowerSetsUnique();
-        PowerSetsDuplicate               powerSetsDuplicate               = new PowerSetsDuplicate();
-        SubSetsSum                       subSetsSum                       = new SubSetsSum();
-        Combinations                     combinations                     = new Combinations();
-        CombinationsSum_1                combinationsSum_1                = new CombinationsSum_1();
-        CombinationsSum_2                combinationsSum_2                = new CombinationsSum_2();
-        CombinationsSum_3                combinationsSum_3                = new CombinationsSum_3();
-        GenerateParentheses              generateParentheses              = new GenerateParentheses();
-        LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
-        RestoreIPAddresses               restoreIPAddresses               = new RestoreIPAddresses();
+        NoDuplicates                                    noDuplicates                                    = new NoDuplicates();
+        Duplicates                                      duplicates                                      = new Duplicates();
+        Unique                                          unique                                          = new Unique();
+        ArrayDuplicates                                 arrayUnique                                     = new ArrayDuplicates();
+        PowerSetsUnique                                 powerSetsUnique                                 = new PowerSetsUnique();
+        PowerSetsDuplicate                              powerSetsDuplicate                              = new PowerSetsDuplicate();
+        SubSetsSum                                      subSetsSum                                      = new SubSetsSum();
+        Combinations                                    combinations                                    = new Combinations();
+        CombinationsSum_1                               combinationsSum_1                               = new CombinationsSum_1();
+        CombinationsSum_2                               combinationsSum_2                               = new CombinationsSum_2();
+        CombinationsSum_3                               combinationsSum_3                               = new CombinationsSum_3();
+        GenerateParentheses                             generateParentheses                             = new GenerateParentheses();
+        LetterCombinationsOfAPhoneNumber                letterCombinationsOfAPhoneNumber                = new LetterCombinationsOfAPhoneNumber();
+        RestoreIPAddresses                              restoreIPAddresses                              = new RestoreIPAddresses();
+        SplittingAStringIntoDescendingConsecutiveValues splittingAStringIntoDescendingConsecutiveValues = new SplittingAStringIntoDescendingConsecutiveValues();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -53,6 +55,7 @@ public class index {
         arrayList_A.add(2);
         arrayList_A.add(3);        
         
+        boolean response               = false;
         List<String> list              = new ArrayList<>();
         List<List<Integer>> listToList = new ArrayList<>();
         ArrayList<Integer> arrayList   = new ArrayList<>();
@@ -171,6 +174,13 @@ public class index {
         for(int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
+        
+        System.out.println("================");        
+        System.out.println("SPLITTING A STRING INTO DESCENDING CONSECUTIVE VALUES");
+        
+        response = splittingAStringIntoDescendingConsecutiveValues.splitString("1234");
+        System.out.println(response);
+        
     }
     
 }
