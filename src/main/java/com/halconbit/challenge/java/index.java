@@ -10,6 +10,7 @@ import com.halconbit.challenge.java.backtracking.generateParentheses.GeneratePar
 import com.halconbit.challenge.java.backtracking.letterCombinationsOfAPhoneNumber.LetterCombinationsOfAPhoneNumber;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
+import com.halconbit.challenge.java.backtracking.restoreIPAddresses.RestoreIPAddresses;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
 import com.halconbit.challenge.java.backtracking.stringPermutation.NoDuplicates.NoDuplicates;
 import com.halconbit.challenge.java.backtracking.subsetsSum.SubSetsSum;
@@ -38,6 +39,7 @@ public class index {
         CombinationsSum_3                combinationsSum_3                = new CombinationsSum_3();
         GenerateParentheses              generateParentheses              = new GenerateParentheses();
         LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
+        RestoreIPAddresses               restoreIPAddresses               = new RestoreIPAddresses();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -158,6 +160,14 @@ public class index {
         System.out.println("LETTER COMBINATIONS OF A PHONE NUMBER");
         
         list = letterCombinationsOfAPhoneNumber.letterCombinations("23");
+        for(int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        
+        System.out.println("================");        
+        System.out.println("RESTORE IP ADDRESSES");
+        
+        list = restoreIPAddresses.restoreIpAddresses("25525511135");
         for(int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
