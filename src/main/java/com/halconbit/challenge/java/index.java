@@ -8,6 +8,7 @@ import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_2;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_3;
 import com.halconbit.challenge.java.backtracking.generateParentheses.GenerateParentheses;
 import com.halconbit.challenge.java.backtracking.letterCombinationsOfAPhoneNumber.LetterCombinationsOfAPhoneNumber;
+import com.halconbit.challenge.java.backtracking.matchsticksToSquare.MatchsticksToSquare;
 import com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUniqueChar.MaxLenOfAConcatenatedStrWithUniqueChar;
 import com.halconbit.challenge.java.backtracking.partitionToKSumSubsets.PartitionToKSumSubsets;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
@@ -47,6 +48,8 @@ public class index {
         SplittingAStringIntoDescendingConsecutiveValues splittingAStringIntoDescendingConsecutiveValues = new SplittingAStringIntoDescendingConsecutiveValues();
         MaxLenOfAConcatenatedStrWithUniqueChar          maxLenOfAConcatenatedStrWithUniqueChar          = new MaxLenOfAConcatenatedStrWithUniqueChar();
         PartitionToKSumSubsets                          partitionToKSumSubsets                          = new PartitionToKSumSubsets();
+        MatchsticksToSquare                             matchsticksToSquare                             = new MatchsticksToSquare();
+        
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -56,6 +59,7 @@ public class index {
         int[] numsE                    = {2, 3, 6, 7};
         int[] numsF                    = {10, 1, 2, 7, 6, 1, 5};
         int[] numsG                    = {4, 3, 2, 3, 5, 2, 1};
+        int[] numsH                    = {1, 1, 2, 2, 2};
         
         List<String> listAdd =  new ArrayList<>();
         listAdd.add("un");
@@ -203,6 +207,12 @@ public class index {
         System.out.println("PARTITION TO K SUM SUBSETS");
         
         response = partitionToKSumSubsets.canPartitionKSubsets(numsG, 4);
+        System.out.println(response);
+        
+        System.out.println("================");        
+        System.out.println("MATCHSTICKS TO SQUARE");
+        
+        response = matchsticksToSquare.makesquare(numsH);
         System.out.println(response);
         
         
