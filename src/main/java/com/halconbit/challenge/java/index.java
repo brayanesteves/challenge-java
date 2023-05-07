@@ -13,6 +13,7 @@ import com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUni
 import com.halconbit.challenge.java.backtracking.partitionToKSumSubsets.PartitionToKSumSubsets;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
+import com.halconbit.challenge.java.backtracking.ratInAMaze.RatInAMaze;
 import com.halconbit.challenge.java.backtracking.restoreIPAddresses.RestoreIPAddresses;
 import com.halconbit.challenge.java.backtracking.splittingAStringIntoDescendingConsecutiveValues.SplittingAStringIntoDescendingConsecutiveValues;
 import com.halconbit.challenge.java.backtracking.stringPermutation.Duplicates.Duplicates;
@@ -49,7 +50,7 @@ public class index {
         MaxLenOfAConcatenatedStrWithUniqueChar          maxLenOfAConcatenatedStrWithUniqueChar          = new MaxLenOfAConcatenatedStrWithUniqueChar();
         PartitionToKSumSubsets                          partitionToKSumSubsets                          = new PartitionToKSumSubsets();
         MatchsticksToSquare                             matchsticksToSquare                             = new MatchsticksToSquare();
-        
+        RatInAMaze                                      ratInAMaze                                      = new RatInAMaze();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -61,6 +62,8 @@ public class index {
         int[] numsG                    = {4, 3, 2, 3, 5, 2, 1};
         int[] numsH                    = {1, 1, 2, 2, 2};
         
+        int m[][] = {{1, 0, 0, 0}};
+        
         List<String> listAdd =  new ArrayList<>();
         listAdd.add("un");
         listAdd.add("iq");
@@ -70,11 +73,12 @@ public class index {
         arrayList_A.add(2);
         arrayList_A.add(3);        
         
-        boolean response               = false;
-        int     responseInt            = 0;
-        List<String> list              = new ArrayList<>();
-        List<List<Integer>> listToList = new ArrayList<>();
-        ArrayList<Integer> arrayList   = new ArrayList<>();
+        boolean response                  = false;
+        int     responseInt               = 0;
+        List<String> list                 = new ArrayList<>();
+        List<List<Integer>> listToList    = new ArrayList<>();
+        ArrayList<Integer> arrayList      = new ArrayList<>();
+        ArrayList<String> arrayListString = new ArrayList<>();
         
         System.out.println("NO DUPLICATES");
         System.out.println("================");
@@ -214,6 +218,12 @@ public class index {
         
         response = matchsticksToSquare.makesquare(numsH);
         System.out.println(response);
+        
+        System.out.println("================");        
+        System.out.println("RAT IN A MAZE");
+        
+        arrayListString = ratInAMaze.findPath(m, 4);
+        System.out.println(arrayListString);
         
         
     }
