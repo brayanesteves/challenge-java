@@ -9,6 +9,7 @@ import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_3;
 import com.halconbit.challenge.java.backtracking.generateParentheses.GenerateParentheses;
 import com.halconbit.challenge.java.backtracking.letterCombinationsOfAPhoneNumber.LetterCombinationsOfAPhoneNumber;
 import com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUniqueChar.MaxLenOfAConcatenatedStrWithUniqueChar;
+import com.halconbit.challenge.java.backtracking.partitionToKSumSubsets.PartitionToKSumSubsets;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.restoreIPAddresses.RestoreIPAddresses;
@@ -45,6 +46,7 @@ public class index {
         RestoreIPAddresses                              restoreIPAddresses                              = new RestoreIPAddresses();
         SplittingAStringIntoDescendingConsecutiveValues splittingAStringIntoDescendingConsecutiveValues = new SplittingAStringIntoDescendingConsecutiveValues();
         MaxLenOfAConcatenatedStrWithUniqueChar          maxLenOfAConcatenatedStrWithUniqueChar          = new MaxLenOfAConcatenatedStrWithUniqueChar();
+        PartitionToKSumSubsets                          partitionToKSumSubsets                          = new PartitionToKSumSubsets();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -53,6 +55,7 @@ public class index {
         int[] numsD                    = {1, 2, 2};
         int[] numsE                    = {2, 3, 6, 7};
         int[] numsF                    = {10, 1, 2, 7, 6, 1, 5};
+        int[] numsG                    = {4, 3, 2, 3, 5, 2, 1};
         
         List<String> listAdd =  new ArrayList<>();
         listAdd.add("un");
@@ -195,6 +198,13 @@ public class index {
         
         responseInt = maxLenOfAConcatenatedStrWithUniqueChar.maxLength(listAdd);
         System.out.println(responseInt);
+        
+        System.out.println("================");        
+        System.out.println("PARTITION TO K SUM SUBSETS");
+        
+        response = partitionToKSumSubsets.canPartitionKSubsets(numsG, 4);
+        System.out.println(response);
+        
         
     }
     
