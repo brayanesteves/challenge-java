@@ -8,6 +8,7 @@ import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_2;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_3;
 import com.halconbit.challenge.java.backtracking.generateParentheses.GenerateParentheses;
 import com.halconbit.challenge.java.backtracking.letterCombinationsOfAPhoneNumber.LetterCombinationsOfAPhoneNumber;
+import com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUniqueChar.MaxLenOfAConcatenatedStrWithUniqueChar;
 import com.halconbit.challenge.java.backtracking.powerSets.Duplicates.PowerSetsDuplicate;
 import com.halconbit.challenge.java.backtracking.powerSets.Unique.PowerSetsUnique;
 import com.halconbit.challenge.java.backtracking.restoreIPAddresses.RestoreIPAddresses;
@@ -19,7 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Equations:
+ * TC: O(n * 2^n), SC: O(n)
  * @author Brayan Esteves
  */
 public class index {
@@ -42,6 +44,7 @@ public class index {
         LetterCombinationsOfAPhoneNumber                letterCombinationsOfAPhoneNumber                = new LetterCombinationsOfAPhoneNumber();
         RestoreIPAddresses                              restoreIPAddresses                              = new RestoreIPAddresses();
         SplittingAStringIntoDescendingConsecutiveValues splittingAStringIntoDescendingConsecutiveValues = new SplittingAStringIntoDescendingConsecutiveValues();
+        MaxLenOfAConcatenatedStrWithUniqueChar          maxLenOfAConcatenatedStrWithUniqueChar          = new MaxLenOfAConcatenatedStrWithUniqueChar();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -51,11 +54,17 @@ public class index {
         int[] numsE                    = {2, 3, 6, 7};
         int[] numsF                    = {10, 1, 2, 7, 6, 1, 5};
         
+        List<String> listAdd =  new ArrayList<>();
+        listAdd.add("un");
+        listAdd.add("iq");
+        listAdd.add("ue");
+        
         ArrayList<Integer> arrayList_A = new ArrayList<>();
         arrayList_A.add(2);
         arrayList_A.add(3);        
         
         boolean response               = false;
+        int     responseInt            = 0;
         List<String> list              = new ArrayList<>();
         List<List<Integer>> listToList = new ArrayList<>();
         ArrayList<Integer> arrayList   = new ArrayList<>();
@@ -180,6 +189,12 @@ public class index {
         
         response = splittingAStringIntoDescendingConsecutiveValues.splitString("1234");
         System.out.println(response);
+        
+        System.out.println("================");        
+        System.out.println("MAX LEN OF A CONCATENATED STR WITH UNIQUE CHAR");
+        
+        responseInt = maxLenOfAConcatenatedStrWithUniqueChar.maxLength(listAdd);
+        System.out.println(responseInt);
         
     }
     
