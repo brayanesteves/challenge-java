@@ -8,6 +8,7 @@ import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_2;
 import com.halconbit.challenge.java.backtracking.combinations.CombinationsSum_3;
 import com.halconbit.challenge.java.backtracking.generateParentheses.GenerateParentheses;
 import com.halconbit.challenge.java.backtracking.letterCombinationsOfAPhoneNumber.LetterCombinationsOfAPhoneNumber;
+import com.halconbit.challenge.java.backtracking.mColoring.MColoring;
 import com.halconbit.challenge.java.backtracking.matchsticksToSquare.MatchsticksToSquare;
 import com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUniqueChar.MaxLenOfAConcatenatedStrWithUniqueChar;
 import com.halconbit.challenge.java.backtracking.partitionToKSumSubsets.PartitionToKSumSubsets;
@@ -51,6 +52,7 @@ public class index {
         PartitionToKSumSubsets                          partitionToKSumSubsets                          = new PartitionToKSumSubsets();
         MatchsticksToSquare                             matchsticksToSquare                             = new MatchsticksToSquare();
         RatInAMaze                                      ratInAMaze                                      = new RatInAMaze();
+        MColoring                                       mColoring                                       = new MColoring();
         
         String str                     = "";
         int[] numsA                    = {1, 2, 3};
@@ -62,7 +64,8 @@ public class index {
         int[] numsG                    = {4, 3, 2, 3, 5, 2, 1};
         int[] numsH                    = {1, 1, 2, 2, 2};
         
-        int m[][] = {{1, 0, 0, 0}};
+        int m[][] = {{1, 0, 0, 0}, {1, 0, 0, 0}, {1, 0, 0, 0}, {1, 0, 0, 0}};
+        boolean graph[][] = {{false, true}, {false, true}, {true, true}};
         
         List<String> listAdd =  new ArrayList<>();
         listAdd.add("un");
@@ -224,6 +227,12 @@ public class index {
         
         arrayListString = ratInAMaze.findPath(m, 4);
         System.out.println(arrayListString);
+        
+        System.out.println("================");        
+        System.out.println("M-COLORING");
+        
+        response = mColoring.graphColoring(graph, 4, 3);
+        System.out.println(response);
         
         
     }
