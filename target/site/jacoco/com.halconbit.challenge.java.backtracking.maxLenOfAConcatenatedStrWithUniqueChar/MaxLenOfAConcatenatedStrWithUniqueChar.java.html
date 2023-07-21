@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MaxLenOfAConcatenatedStrWithUniqueChar.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">challenge-java</a> &gt; <a href="index.source.html" class="el_package">com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUniqueChar</a> &gt; <span class="el_source">MaxLenOfAConcatenatedStrWithUniqueChar.java</span></div><h1>MaxLenOfAConcatenatedStrWithUniqueChar.java</h1><pre class="source lang-java linenums">/**
+ * You are given an array of &quot;strings&quot; &quot;arr&quot;. A &quot;string&quot; &quot;s&quot; is formed by the 
+ * &quot;concatenation&quot; of a &quot;subsequence&quot; of &quot;arr&quot; that has &quot;unique character&quot;.
+ * Return &quot;the maximum possible length of 's'&quot;.
+ * A &quot;subsequence&quot; is an &quot;array&quot; that can be derived from another &quot;array&quot; by 
+ * deleting some or no elements without changing the order of the remaining 
+ * elements.
+ * 
+ * Example 1:
+ *       Input: arr = [&quot;un&quot;, &quot;iq&quot;, &quot;ue&quot;]
+ *      Output: 4
+ * Explanation: All the valid concatenations are:
+ * - &quot;&quot;
+ * - &quot;un&quot;
+ * - &quot;iq&quot;
+ * - &quot;ue&quot;
+ * - &quot;uniq&quot; (&quot;un&quot; + &quot;iq&quot;)
+ * - &quot;ique&quot; (&quot;iq&quot; + &quot;ue&quot;)
+ * Maximum length is 4.
+ * 
+ * Example 2:
+ *       Input: arr = [&quot;cha&quot;, &quot;r&quot;, &quot;act&quot;, &quot;ers&quot;]
+ *      Output: 6
+ * Explanation: Possible longest valid concatenations are &quot;chaers&quot; 
+ * (&quot;cha&quot; + &quot;ers&quot;) ans &quot;acters&quot; (&quot;act&quot; + &quot;ers&quot;).
+ * 
+ * Example 3:
+ *       Input: arr = [&quot;abcdefghijklmnopqrstuvwxyz&quot;]
+ *      Output: 26
+ * Explanation: The only string in arr has all 26 characters.
+ * 
+ * Constraints:
+ * 1 &lt;= arr.lengt &lt;= 16
+ * 1 &lt;= arr[i].length &lt;= 26
+ * arr[i] contains only lowercase English letters.
+ */
+package com.halconbit.challenge.java.backtracking.maxLenOfAConcatenatedStrWithUniqueChar;
+
+import java.util.List;
+
+/**
+ *
+ * @author Brayan Esteves
+ */
+<span class="nc" id="L45">public class MaxLenOfAConcatenatedStrWithUniqueChar {</span>
+    private boolean isUnique(String str) {
+<span class="nc" id="L47">        int[] arr = new int[26];</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        for(int i = 0; i &lt; str.length(); i++) {</span>
+<span class="nc" id="L49">            arr[str.charAt(i) - 'a']++;</span>
+        }
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        for(int i = 0; i &lt; arr.length; i++) {</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            if(arr[i] &gt; 1) {</span>
+<span class="nc" id="L53">                return false;</span>
+            }
+        }
+<span class="nc" id="L56">        return true;</span>
+    }
+    private int dfs(List&lt;String&gt; arr, String str, int curr) {
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        if(curr == arr.size()) {</span>
+<span class="nc" id="L60">            return str.length();</span>
+        }
+<span class="nc" id="L62">        int left = 0, right = 0;</span>
+<span class="nc" id="L63">        String tmp = str + arr.get(curr);</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">        if(isUnique(tmp)) {</span>
+<span class="nc" id="L65">            left = dfs(arr, tmp, curr + 1);</span>
+        }
+<span class="nc" id="L67">        right = dfs(arr, str, curr + 1);</span>
+<span class="nc" id="L68">        return Math.max(left, right);</span>
+    }
+    public int maxLength(List&lt;String&gt; arr) {
+<span class="nc" id="L71">        return dfs(arr, &quot;&quot;, 0);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

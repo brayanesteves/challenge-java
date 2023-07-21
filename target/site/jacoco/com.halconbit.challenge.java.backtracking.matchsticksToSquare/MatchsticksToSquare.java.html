@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MatchsticksToSquare.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">challenge-java</a> &gt; <a href="index.source.html" class="el_package">com.halconbit.challenge.java.backtracking.matchsticksToSquare</a> &gt; <span class="el_source">MatchsticksToSquare.java</span></div><h1>MatchsticksToSquare.java</h1><pre class="source lang-java linenums">/**
+ * You are given an &quot;integer&quot; array &quot;matchsticks&quot; where &quot;matchsticks[i]&quot; is the 
+ * length of the &quot;i^th&quot; matchsticks. You want to use &quot;all the matchsticks&quot; to 
+ * make one square. You &quot;should not break&quot; any stick, but you can link them up, 
+ * and each matchstick must be used &quot;exactly one time&quot;.
+ * Return &quot;true&quot; if you can make this square and &quot;false&quot; otherwise.
+ * 
+ * Example 1:
+ *       Input: matchsticks = [1, 1, 2, 2, 2]
+ *      Output: true
+ * Explanation: You can form a square with length 2, one side of the square came
+ * two sticks with length 1.
+ * 
+ * Example 2:
+ *       Input: matchsticks = [3, 3, 3, 3, 4]
+ *      Output: false
+ * Explanation: You cannot find a way to form a square with all the matchsticks.
+ * 
+ * Constraints: 
+ * 1) 1 &lt;= matchsticks.length &lt;= 15
+ */
+package com.halconbit.challenge.java.backtracking.matchsticksToSquare;
+
+/**
+ *
+ * @author Brayan Esteves
+ */
+<span class="nc" id="L28">public class MatchsticksToSquare {</span>
+    private boolean dfs(int[] nums, boolean[] visited, int k, int targetSum, int currSum, int index) {
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        if(k == 0) {</span>
+<span class="nc" id="L31">            return true;</span>
+        }
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        if(targetSum == currSum) {</span>
+<span class="nc" id="L34">            return dfs(nums, visited, k - 1, targetSum, 0, nums.length - 1);</span>
+        }
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        for(int i = index; i &gt;= 0; i--) {</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            if(visited[i]) {</span>
+<span class="nc" id="L38">                continue;</span>
+            }
+<span class="nc bnc" id="L40" title="All 6 branches missed.">            if(i + 1 &lt; nums.length &amp;&amp; nums[i] == nums[i + 1] &amp;&amp; !visited[i + 1]) {</span>
+<span class="nc" id="L41">               continue;</span>
+            }
+<span class="nc bnc" id="L43" title="All 2 branches missed.">            if(currSum + nums[i] &gt; targetSum) {</span>
+<span class="nc" id="L44">                continue;</span>
+            }
+<span class="nc" id="L46">            visited[i] = true;</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            if(dfs(nums, visited, k, targetSum, currSum + nums[i], i- 1)) {</span>
+<span class="nc" id="L48">                return true;</span>
+            }
+<span class="nc" id="L50">            visited[i] = false;</span>
+        }
+<span class="nc" id="L52">        return false;</span>
+    }
+    public boolean makesquare(int[] matchsticks) {
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        if(matchsticks.length &lt; 4) {</span>
+<span class="nc" id="L56">            return false;</span>
+        }
+<span class="nc" id="L58">        int sum = 0;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        for(int num : matchsticks) {</span>
+<span class="nc" id="L60">            sum += num;</span>
+        }
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        if(sum % 4 != 0) {</span>
+<span class="nc" id="L63">            return false;</span>
+        }
+<span class="nc" id="L65">        int targetSum = sum / 4;</span>
+<span class="nc" id="L66">        return dfs(matchsticks, new boolean[matchsticks.length], 4, targetSum, 0, matchsticks.length - 1);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

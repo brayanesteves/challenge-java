@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PartitionToKSumSubsets.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">challenge-java</a> &gt; <a href="index.source.html" class="el_package">com.halconbit.challenge.java.backtracking.partitionToKSumSubsets</a> &gt; <span class="el_source">PartitionToKSumSubsets.java</span></div><h1>PartitionToKSumSubsets.java</h1><pre class="source lang-java linenums">/**
+ * Given an &quot;integer&quot; array &quot;nums&quot; and as &quot;integer&quot; &quot;k&quot;, return &quot;true&quot; if is is 
+ * possible to divide this &quot;array&quot; into &quot;k&quot; non-empty subsets whose sums are all 
+ * equal.
+ * 
+ * Example 1:
+ *       Input: nums = [4, 3, 2, 3, 5, 2, 1], k = 4
+ *      Output: true
+ * Explanation: It is possible to divide it into 4 subsets (5), (1, 4), (2, 3) 
+ * with equal sums.
+ * 
+ * Example 2:
+ *  Input: nums = [1, 2, 3, 4], k = 3
+ * Output: false
+ * 
+ * Constraints:
+ * 1) 1 &lt;= k       &lt;= nums.length &lt;= 16
+ * 2) 1 &lt;= nums[i] &lt;= 10^4
+ * 3) The frequency of each element is in the range (1, 4)
+ */
+package com.halconbit.challenge.java.backtracking.partitionToKSumSubsets;
+
+import java.util.Arrays;
+
+/**
+ * Equations:
+ * TC: O(4^n), SC: O(n)
+ * @author Brayan Esteves
+ */
+<span class="nc" id="L30">public class PartitionToKSumSubsets {</span>
+    private boolean dfs(int[] nums, boolean[] visited, int k, int targetSum, int currSum, int index) {
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if(k == 0) {</span>
+<span class="nc" id="L33">            return true;</span>
+        }
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if(targetSum == currSum) {</span>
+<span class="nc" id="L36">            return dfs(nums, visited, k - 1, targetSum, 0, nums.length - 1);</span>
+        }
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        for(int i = index; i &gt;= 0; i--) {</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">            if(visited[i]) {</span>
+<span class="nc" id="L40">                continue;</span>
+            }
+<span class="nc bnc" id="L42" title="All 6 branches missed.">            if(i + 1 &lt; nums.length &amp;&amp; nums[i] == nums[i + 1] &amp;&amp; !visited[i + 1]) {</span>
+<span class="nc" id="L43">               continue;</span>
+            }
+<span class="nc bnc" id="L45" title="All 2 branches missed.">            if(currSum + nums[i] &gt; targetSum) {</span>
+<span class="nc" id="L46">                continue;</span>
+            }
+<span class="nc" id="L48">            visited[i] = true;</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            if(dfs(nums, visited, k, targetSum, currSum + nums[i], i- 1)) {</span>
+<span class="nc" id="L50">                return true;</span>
+            }
+<span class="nc" id="L52">            visited[i] = false;</span>
+        }
+<span class="nc" id="L54">        return false;</span>
+    }
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+<span class="nc" id="L57">        int sum = 0;</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">        for(int num : nums) {</span>
+<span class="nc" id="L59">            sum += num;</span>
+        }
+<span class="nc bnc" id="L61" title="All 2 branches missed.">        if(sum % k != 0) {</span>
+<span class="nc" id="L62">            return false;</span>
+        }
+<span class="nc" id="L64">        int targetSum = sum / k;</span>
+<span class="nc" id="L65">        Arrays.sort(nums);</span>
+<span class="nc" id="L66">        return dfs(nums, new boolean[nums.length], k, targetSum, 0, nums.length - 1);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

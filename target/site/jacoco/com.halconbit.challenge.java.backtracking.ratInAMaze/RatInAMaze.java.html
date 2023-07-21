@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RatInAMaze.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">challenge-java</a> &gt; <a href="index.source.html" class="el_package">com.halconbit.challenge.java.backtracking.ratInAMaze</a> &gt; <span class="el_source">RatInAMaze.java</span></div><h1>RatInAMaze.java</h1><pre class="source lang-java linenums">/**
+ * Consider a rat placed at (0, 0) in a square matrix of order N * N, it has to 
+ * reach the destination at (N - 1, N - 1). Find all possible paths that the rat 
+ * can take to reach from source to destination. The directions in which the rat 
+ * can move are 'U'(up), 'D'(down), 'L'(left), 'R'(right). Value 0 at a cell in 
+ * the matrix represents that it is blocked and rat cannot move to it while 
+ * value 1 at a cell in the matrix represents that rat can be travel through it.
+ * Note: In a path, no cell can be visited more than one time. If the source 
+ * cell is 0, the rat cannot move to any other cell.
+ * 
+ * Example 1:
+ * N = 4
+ * m[][] = {{1, 0, 0, 0}},
+ */
+package com.halconbit.challenge.java.backtracking.ratInAMaze;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Brayan Esteves
+ */
+<span class="nc" id="L23">public class RatInAMaze {</span>
+    private void dfs(int[][] matrix, boolean[][] visited, ArrayList&lt;String&gt; res, int n , int r, int c, String currPath) {
+<span class="nc bnc" id="L25" title="All 12 branches missed.">        if(r &lt; 0 || r &gt;= n || c &lt; 0 || c &gt;= n || matrix[r][c] == 0 || visited[r][c]) {</span>
+<span class="nc" id="L26">            return;</span>
+        }
+<span class="nc bnc" id="L28" title="All 4 branches missed.">        if(r == n - 1 &amp;&amp; c == n - 1) {</span>
+<span class="nc" id="L29">            res.add(currPath);</span>
+<span class="nc" id="L30">            return;</span>
+        }
+<span class="nc" id="L32">        visited[r][c] = true;</span>
+        // Down, Up, Right, Left
+<span class="nc" id="L34">        dfs(matrix, visited, res, n, r + 1, c, currPath + &quot;D&quot;);</span>
+<span class="nc" id="L35">        dfs(matrix, visited, res, n, r - 1, c, currPath + &quot;U&quot;);</span>
+<span class="nc" id="L36">        dfs(matrix, visited, res, n, r, c + 1, currPath + &quot;R&quot;);</span>
+<span class="nc" id="L37">        dfs(matrix, visited, res, n, r - 1, c, currPath + &quot;L&quot;);</span>
+        
+<span class="nc" id="L39">        visited[r][c] = false;</span>
+<span class="nc" id="L40">    }</span>
+    public ArrayList&lt;String&gt; findPath(int[][] m, int n) {
+<span class="nc" id="L42">        boolean[][] visited = new boolean[n][n];</span>
+<span class="nc" id="L43">        ArrayList&lt;String&gt; res = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L44">        dfs(m, visited, res, n, 0, 0, &quot;&quot;);</span>
+<span class="nc" id="L45">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
