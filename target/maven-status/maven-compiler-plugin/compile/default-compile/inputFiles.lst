@@ -6,11 +6,13 @@
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/stringPermutation/NoDuplicates/NoDuplicates.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/powerSets/Duplicates/PowerSetsDuplicate.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/partitionToKSumSubsets/PartitionToKSumSubsets.java
+/home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/mapobjects/mapstruct/entity/Product.java
+/home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/mapobjects/mapstruct/dto/GetProduct.java
+/home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/mapobjects/mapstruct/mapper/ProductMapper.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/splittingAStringIntoDescendingConsecutiveValues/SplittingAStringIntoDescendingConsecutiveValues.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/combinations/CombinationsSum_1.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/subsetsSum/SubSetsSum.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/letterCombinationsOfAPhoneNumber/LetterCombinationsOfAPhoneNumber.java
-/home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/mapobjects/mapstruct/Product.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/combinations/CombinationsSum_2.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/index.java
 /home/brayan/Documentos/DOCUMENTOS/PROYECTOS (B.O.E.P)/00 - PROYECTOS PROPIOS/HALCON BIT/JAVA/SE/challenge-java/src/main/java/com/halconbit/challenge/java/backtracking/powerSets/Unique/PowerSetsUnique.java

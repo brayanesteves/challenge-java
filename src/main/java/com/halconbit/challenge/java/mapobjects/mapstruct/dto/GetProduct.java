@@ -54,4 +54,9 @@ public class GetProduct {
         this.creationDate = creationDate;
     }
     
+    @Override
+    public String toString() {
+        return "GetProduct{" + "id=" + this.id + ", name='" + this.name + '\'' + ", creationDate='" + this.creationDate + '\'' + "}";
+    }
+    
 }
