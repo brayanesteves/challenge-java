@@ -1,10 +1,9 @@
-/**
- *
- * @author Brayan Esteves
- */
+import com.halconbit.challenge.java.mapobjects.mapstruct.dto.CategoryDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
@@ -33,5 +32,9 @@ public class ProductEntity {
 
     @Column(name = "creation_date")
     private LocalDateTime creationDate;
+    
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private CategoryDTO categoryDto;
     
 }

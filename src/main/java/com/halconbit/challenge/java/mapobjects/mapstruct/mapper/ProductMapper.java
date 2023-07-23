@@ -12,7 +12,7 @@ import org.mapstruct.MappingConstants;
  *
  * @author Brayan Esteves
  */
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {})
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {CategoryMapper.class})
 public interface ProductMapper {
     
     /*@Mappings({
