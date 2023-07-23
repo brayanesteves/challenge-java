@@ -2,6 +2,7 @@ package com.halconbit.challenge.java.mapobjects.mapstruct.mapper;
 
 import com.halconbit.challenge.java.mapobjects.mapstruct.dto.GetProduct;
 import com.halconbit.challenge.java.mapobjects.mapstruct.entity.Product;
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -19,4 +20,10 @@ public interface ProductMapper {
         @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH-mm-ss")
     })    
     GetProduct productToGetDTO(Product product);
+    
+    /**
+     * Map inverse
+     */
+    @InheritInverseConfiguration
+    Product toEntity(GetProduct getProduct);
 }
