@@ -24,10 +24,8 @@ public interface ProductMapper {
         @Mapping(source = "id", target = "id"),
         @Mapping(source = "name", target = "name"),
         @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH:mm:ss")
-    })    
+    })  
     GetProduct productToGetDTO(Product product);
-    
-    
     
     /**
      * Map inverse
