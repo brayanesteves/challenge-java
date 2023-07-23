@@ -23,14 +23,22 @@ public interface ProductMapper {
     @Mappings({
         @Mapping(source = "id", target = "id"),
         @Mapping(source = "name", target = "name"),
-        @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH:mm:ss")
-    })  
+        @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH:mm:ss"),
+        @Mapping(source = "category", target = "category"),
+        @Mapping(source = "category.id", target = "category.id"),
+        @Mapping(source = "category.name", target = "category.name"),
+        @Mapping(source = "category.status", target = "category.status"),
+        @Mapping(source = "category.creationDate", target = "category.creationDate")
+    })
     GetProduct productToGetDTO(Product product);
     
     /**
      * Map inverse
      */
     @InheritInverseConfiguration
+    @Mappings({
+        @Mapping(target = "creationDate", ignore = true)
+    })
     Product toEntity(GetProduct getProduct);
     
     List<GetProduct> toGetProductList(List<Product> productList);

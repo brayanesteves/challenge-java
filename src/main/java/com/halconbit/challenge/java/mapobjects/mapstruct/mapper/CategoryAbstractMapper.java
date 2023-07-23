@@ -18,7 +18,13 @@ public abstract class CategoryAbstractMapper {
     
     @Autowired
     private CategoryRepository categoryRepository;
-        
+    
+    @Mappings({        
+        @Mapping(source = "id", target = "id"),
+        @Mapping(source = "name", target = "name"),
+        @Mapping(source = "status", target = "status"),
+        @Mapping(source = "creationDate", target = "creationDate")
+    })  
    abstract CategoryDTO toGetCategory(CategoryEntity categoryEntity);
     
     /**
