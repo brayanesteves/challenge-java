@@ -3,6 +3,7 @@ package com.halconbit.challenge.java.mapobjects.mapstruct.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
  * @author brayan
  */
 @Entity
+@Table(name = "product")
 public class Product {
     
     @Id
