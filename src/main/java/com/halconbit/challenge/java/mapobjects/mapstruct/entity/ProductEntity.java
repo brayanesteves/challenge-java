@@ -26,15 +26,15 @@ import lombok.Builder;
 public class ProductEntity {
     
     @Id
-    private long id;
+    private long                    id;
 
-    private String name;
+    private String                name;
 
     @Column(name = "creation_date")
     private LocalDateTime creationDate;
     
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private CategoryDTO categoryDto;
+    private CategoryDTO    categoryDto;
     
 }

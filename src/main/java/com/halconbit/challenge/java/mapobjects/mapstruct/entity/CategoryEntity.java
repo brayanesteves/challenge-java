@@ -26,11 +26,11 @@ import lombok.Builder;
 public class CategoryEntity {
     
     @Id
-    private long id;
+    private long                    id;
 
-    private String name;
+    private String                name;
     
-    private boolean status;
+    private boolean             status;
 
     @Column(name = "creation_date")
     private LocalDateTime creationDate;

@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author brayan
@@ -15,8 +17,9 @@ import lombok.Builder;
 @AllArgsConstructor
 @Builder
 public class ProductDTO {
-    private long id;
-    private String name;
+    private long                    id;
+    private String                name;
     private LocalDateTime creationDate;
-    private CategoryDTO categoryDto;
+    private CategoryDTO    categoryDto;
+    private String               price;
 }

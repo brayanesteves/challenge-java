@@ -8,9 +8,10 @@ import java.time.LocalDateTime;
  */
 public class GetProduct {
     
-    private long id;
-    private String name;
+    private long                    id;
+    private String                name;
     private LocalDateTime creationDate;
+    private String               price;
 
     /**
      * @return the id

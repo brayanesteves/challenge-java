@@ -25,10 +25,8 @@ public interface ProductMapper {
         @Mapping(source = "name", target = "name"),
         @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH:mm:ss"),
         @Mapping(source = "category", target = "category"),
-        @Mapping(source = "category.id", target = "category.id"),
-        @Mapping(source = "category.name", target = "category.name"),
-        @Mapping(source = "category.status", target = "category.status"),
-        @Mapping(source = "category.creationDate", target = "category.creationDate")
+        @Mapping(source = "price", target = "price", numberFormat = "$0.00")
+        
     })
     GetProduct productToGetDTO(Product product);
     

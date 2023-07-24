@@ -16,9 +16,9 @@ import java.time.LocalDateTime;
 public class Product {
     
     @Id
-    private long id;
+    private long                    id;
 
-    private String name;
+    private String                name;
 
     @Column(name = "creation_date")
     private LocalDateTime creationDate;

@@ -18,9 +18,9 @@ import lombok.Builder;
 @Builder
 public class CategoryDTO {
     
-    private long id;
-    private String name;    
-    private boolean status;
+    private long                    id;
+    private String                name;    
+    private boolean             status;
     private LocalDateTime creationDate;
     
 }
