@@ -1,4 +1,4 @@
-package com.halconbit.challenge.java.simple;
+package com.halconbit.challenge.java.oop.TreeFlowerBush;
 
 import java.util.Scanner;
 

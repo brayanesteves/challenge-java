@@ -1,4 +1,4 @@
-package com.halconbit.challenge.java.simple.dto;
+package com.halconbit.challenge.java.oop.TreeFlowerBush.dto;
 
 public abstract class Plant {
     
