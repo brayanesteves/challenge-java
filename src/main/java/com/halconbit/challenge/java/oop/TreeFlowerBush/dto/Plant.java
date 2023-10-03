@@ -2,10 +2,10 @@ package com.halconbit.challenge.java.oop.TreeFlowerBush.dto;
 
 public abstract class Plant {
     
-    private String  name;
-    private double  stemHeight;
-    private boolean hasLeaves;
-    private String  idealClimate;
+    protected String  name;
+    protected double  stemHeight;
+    protected boolean hasLeaves;
+    protected String  idealClimate;
 
     public Plant() {
     }

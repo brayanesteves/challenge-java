@@ -1,5 +1,8 @@
 package com.halconbit.challenge.java.oop.TreeFlowerBush;
 
+import com.halconbit.challenge.java.oop.TreeFlowerBush.dto.Bush;
+import com.halconbit.challenge.java.oop.TreeFlowerBush.dto.Flower;
+import com.halconbit.challenge.java.oop.TreeFlowerBush.dto.Tree;
 import java.util.Scanner;
 
 /**

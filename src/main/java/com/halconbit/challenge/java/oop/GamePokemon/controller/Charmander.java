@@ -1,5 +1,8 @@
 package com.halconbit.challenge.java.oop.GamePokemon.controller;
 
+import com.halconbit.challenge.java.oop.GamePokemon.dto.Pokemon;
+import com.halconbit.challenge.java.oop.GamePokemon.interfaces.IFire;
+
 public class Charmander extends Pokemon implements IFire {
     
     public Charmander() {
@@ -8,17 +11,17 @@ public class Charmander extends Pokemon implements IFire {
     
     // <Class [Abstract]: Pokemon>
     @Override
-    protected void attackTackle() {
+    public void attackTackle() {
         System.out.println("Hello, I am Bulbasaur and it's my attack - tackle.");
     }
     
     @Override
-    protected void attackScratch() {
+    public void attackScratch() {
         System.out.println("Hello, I am Bulbasaur and it's my attack - scartch.");
     }
     
     @Override
-    protected void attackBite() {
+    public void attackBite() {
         System.out.println("Hello, I am Bulbasaur and it's my attack - bite.");
     }
     // </Class [Abstract]: Pokemon>

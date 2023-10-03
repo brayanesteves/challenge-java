@@ -1,5 +1,9 @@
 package com.halconbit.challenge.java.oop.GamePokemon;
 
+import com.halconbit.challenge.java.oop.GamePokemon.controller.Bulbasaur;
+import com.halconbit.challenge.java.oop.GamePokemon.controller.Charmander;
+import com.halconbit.challenge.java.oop.GamePokemon.controller.Pikachu;
+import com.halconbit.challenge.java.oop.GamePokemon.controller.Squirtle;
 import java.util.Scanner;
 
 /**
