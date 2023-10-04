@@ -24,10 +24,10 @@ public abstract class CategoryAbstractMapper {
         @Mapping(source = "name", target = "name"),
         @Mapping(source = "status", target = "status"),
         @Mapping(source = "creationDate", target = "creationDate"),
-        @Mapping(source = "category.id", target = "category.id"),
+        /*@Mapping(source = "category.id", target = "category.id"),
         @Mapping(source = "category.name", target = "category.name"),
         @Mapping(source = "category.status", target = "category.status"),
-        @Mapping(source = "category.creationDate", target = "category.creationDate")
+        @Mapping(source = "category.creationDate", target = "category.creationDate")*/
     })  
    abstract CategoryDTO toGetCategory(CategoryEntity categoryEntity);
     
