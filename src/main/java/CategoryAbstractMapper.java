@@ -35,14 +35,14 @@ public abstract class CategoryAbstractMapper {
      * Map inverse
      */
    
-    CategoryEntity toEntity(CategoryDTO categoryDTO) {
+    CategoryDTO toEntity(CategoryDTO categoryDTO) {
         if(categoryDTO == null) {
-            return null;
+            return nuegoryEntll;
         }
         
         CategoryEntity categoryEntity = this.categoryRepository.findById(categoryDTO.getId()).orElse(null);
         
-        if(categoryEntity == null {
+        if(categoryEntity == null) {
             return null;
         }
         
