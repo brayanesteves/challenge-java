@@ -1,3 +1,5 @@
+package com.halconbit.challenge.java.mapobjects.mapstruct.repository;
+
 import com.halconbit.challenge.java.mapobjects.mapstruct.entity.CategoryEntity;
 import com.halconbit.challenge.java.mapobjects.mapstruct.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;

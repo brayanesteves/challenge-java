@@ -1,3 +1,6 @@
+package com.halconbit.challenge.java.mapobjects.mapstruct.mapper;
+
+import com.halconbit.challenge.java.mapobjects.mapstruct.repository.CategoryRepository;
 import com.halconbit.challenge.java.mapobjects.mapstruct.dto.CategoryDTO;
 import com.halconbit.challenge.java.mapobjects.mapstruct.entity.CategoryEntity;
 
