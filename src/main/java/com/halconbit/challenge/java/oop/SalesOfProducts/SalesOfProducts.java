@@ -80,6 +80,9 @@ public class SalesOfProducts {
         // 5.3 - Skip & Limit.
         lambda.withSkipAndLimit_ClassPerson(persons);
         
+        // 6 - Collectors.
+        // 6.1 - GroupBy.
+        lambda.withGroupByDouble_ClassProduct(products);
     }    
     
 }

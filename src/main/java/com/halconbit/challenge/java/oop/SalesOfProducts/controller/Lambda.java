@@ -1,10 +1,12 @@
 package com.halconbit.challenge.java.oop.SalesOfProducts.controller;
 
 import com.halconbit.challenge.java.oop.SalesOfProducts.model.Person;
+import com.halconbit.challenge.java.oop.SalesOfProducts.model.Product;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -107,11 +109,11 @@ public class Lambda {
         System.out.println("</SKIP & LIMIT>");
     }
     
-    public void withGroupBy_ClassProduct(List<Person> persons) {
-        System.out.println("<SKIP & LIMIT>");
-        List<Person> skipList = persons.stream().skip(this.pageNumber * this.pageSize).limit(this.pageSize).collect(Collectors.toList());
-        this.printList(skipList);
-        System.out.println("</SKIP & LIMIT>");
+    public void withGroupByDouble_ClassProduct(List<Product> products) {
+        System.out.println("<GROUP BY>");
+        Map<Double, List<Product>> groupByCollect = products.stream().filter(product -> product.getPriceUnit() > 20.00).collect(Collectors.groupingBy(Product::getPriceUnit));
+        System.out.println(groupByCollect);
+        System.out.println("</GROUP BY>");
     }
     
     public int getAge(LocalDate birthDate) {
