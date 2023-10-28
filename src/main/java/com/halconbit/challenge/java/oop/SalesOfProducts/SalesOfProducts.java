@@ -50,7 +50,7 @@ public class SalesOfProducts {
         lambda.withFilter(persons);
         
         // 2 - Map (param: Function)
-                
+        lambda.withMap(persons);
         
     }    
     
