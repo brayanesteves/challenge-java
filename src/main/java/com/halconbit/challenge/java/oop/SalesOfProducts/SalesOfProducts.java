@@ -1,6 +1,7 @@
 package com.halconbit.challenge.java.oop.SalesOfProducts;
 
 import com.halconbit.challenge.java.oop.SalesOfProducts.controller.Functional;
+import com.halconbit.challenge.java.oop.SalesOfProducts.controller.Lambda;
 import com.halconbit.challenge.java.oop.SalesOfProducts.model.Person;
 import com.halconbit.challenge.java.oop.SalesOfProducts.model.Product;
 import java.lang.reflect.Array;
@@ -36,10 +37,12 @@ public class SalesOfProducts {
         // Imperative.
         // Functional.
         Functional functional = new Functional();
+        Lambda     lambda     = new Lambda();
         
         functional.withFor(persons);
         functional.withForEach(persons);
         
+        lambda.withForEachLambda(persons);        
         
         // Lambda. Method reference.
         // list.forEach(System.out::println);        
