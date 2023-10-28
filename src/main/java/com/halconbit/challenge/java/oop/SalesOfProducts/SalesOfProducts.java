@@ -46,20 +46,23 @@ public class SalesOfProducts {
         // Lambda. Method reference.
         // list.forEach(System.out::println);        
         
-        // 1 - Filter (param: Predicate)
+        // 1 - Filter (param: Predicate).
         lambda.withFilter(persons);
         
-        // 2 - Map (param: Function)
+        // 2 - Map (param: Function).
         lambda.withMap(persons);
         
-        // 2.1 - Filter with map
+        // 2.1 - Filter with map.
         lambda.withFilterMap(persons);
         
-        // 2.2 - Map on prefix
+        // 2.2 - Map on prefix.
         lambda.withMapOnPrefix(persons);
         
-        // 3 - Sorted (param: Comparator)
-        lambda.withSorted(persons);
+        // 3 - Sorted (param: Comparator).
+        // A) Asc.
+        lambda.withSortedAsc(persons);
+        // B) Desc.
+        lambda.withSortedDesc(persons);
         
     }    
     

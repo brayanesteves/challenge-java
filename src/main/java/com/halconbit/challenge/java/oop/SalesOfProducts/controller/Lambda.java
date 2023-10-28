@@ -43,12 +43,20 @@ public class Lambda {
         System.out.println("</MAP ON PREFIX>");
     }
     
-    public void withSorted(List<Person> persons) {
-        System.out.println("<SORTED>");
+    public void withSortedAsc(List<Person> persons) {
+        System.out.println("<SORTED: ASC>");
         Comparator<Person> byNameAsc = (Person object_1, Person object_2) -> object_1.getName().compareTo(object_2.getName());
-        List<Person> sortedList = persons.stream().sorted(byNameAsc).collect(Collectors.toList());
+        List<Person> sortedList      = persons.stream().sorted(byNameAsc).collect(Collectors.toList());
         this.printList(sortedList);
-        System.out.println("</SORTED>");
+        System.out.println("</SORTED: ASC>");
+    }
+    
+    public void withSortedDesc(List<Person> persons) {
+        System.out.println("<SORTED: DESC>");
+        Comparator<Person> byNameDesc = (Person object_1, Person object_2) -> object_2.getName().compareTo(object_1.getName());
+        List<Person> sortedList       = persons.stream().sorted(byNameDesc).collect(Collectors.toList());
+        this.printList(sortedList);
+        System.out.println("</SORTED: DESC>");
     }
     
     public int getAge(LocalDate birthDate) {
