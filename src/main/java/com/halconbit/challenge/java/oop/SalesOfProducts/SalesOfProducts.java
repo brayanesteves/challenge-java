@@ -93,6 +93,9 @@ public class SalesOfProducts {
         // 6.4 - Getting sum and summary.
         lambda.gettingSumAndSummaryWithDouble_ClassProduct(products);
         
+        // 7 - Reduce.
+        lambda.withReduce_ClassProduct(products);
+                
     }    
     
 }

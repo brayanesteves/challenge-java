@@ -8,6 +8,7 @@ import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -143,6 +144,13 @@ public class Lambda {
         DoubleSummaryStatistics statistics = products.stream().collect(Collectors.summarizingDouble(Product::getPriceUnit));
         System.out.println(statistics);
         System.out.println("</SUMMARIZING: DOUBLE SUMMARY STATISTICS>");
+    }
+    
+    public void withReduce_ClassProduct(List<Product> products) {
+        System.out.println("<REDUCE>");
+        Optional<Double> sum = products.stream().map(Product::getPriceUnit).reduce(Double::sum);
+        System.out.println(sum.get());
+        System.out.println("</REDUCE>");
     }
     
     public int getAge(LocalDate birthDate) {
