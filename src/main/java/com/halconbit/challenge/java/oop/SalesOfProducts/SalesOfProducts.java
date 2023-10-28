@@ -87,7 +87,7 @@ public class SalesOfProducts {
         // B) String.
         lambda.withGroupByString_ClassProduct(products);
         // 6.2 - Counting.
-        
+        lambda.withCountingLong_ClassProduct(products);
         
     }    
     
