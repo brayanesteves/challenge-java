@@ -28,6 +28,13 @@ public class Lambda {
         System.out.println("</MAP>");
     }
     
+    public void withFilterMap(List<Person> persons) {
+        System.out.println("<FILTER & MAP>");
+        List<Integer> mapList = persons.stream().filter(person -> this.getAge(person.getDateOfBirth()) >= 18).map(person -> this.getAge(person.getDateOfBirth())).collect(Collectors.toList());
+        this.printList(mapList);
+        System.out.println("</FILTER & MAP>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }

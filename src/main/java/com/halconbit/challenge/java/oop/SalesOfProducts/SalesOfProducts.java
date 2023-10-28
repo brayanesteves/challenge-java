@@ -52,6 +52,8 @@ public class SalesOfProducts {
         // 2 - Map (param: Function)
         lambda.withMap(persons);
         
+        // 2.1 - Filter with map
+        lambda.withFilterMap(persons);
     }    
     
 }
