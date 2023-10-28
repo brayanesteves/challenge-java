@@ -130,6 +130,13 @@ public class Lambda {
         System.out.println("</COUNTING: LONG>");
     }
     
+    public void groupingByProductNameAndSummingWithDouble_ClassProduct(List<Product> products) {
+        System.out.println("<GROUP BY & SUMMING: DOUBLE>");
+        Map<String, Double> countingCollect = products.stream().collect(Collectors.groupingBy(Product::getName, Collectors.summingDouble(Product::getPriceUnit)));
+        System.out.println(countingCollect);
+        System.out.println("</GROUP BY & SUMMING: DOUBLE>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }

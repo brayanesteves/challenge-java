@@ -88,6 +88,8 @@ public class SalesOfProducts {
         lambda.withGroupByString_ClassProduct(products);
         // 6.2 - Counting.
         lambda.withCountingLong_ClassProduct(products);
+        // 6.3 - Grouping by product name and summing.
+        lambda.groupingByProductNameAndSummingWithDouble_ClassProduct(products);
         
     }    
     
