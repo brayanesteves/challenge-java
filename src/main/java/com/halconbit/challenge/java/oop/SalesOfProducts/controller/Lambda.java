@@ -59,6 +59,13 @@ public class Lambda {
         System.out.println("</SORTED: DESC>");
     }
     
+    public void withAnyMatch(List<Person> persons) {
+        System.out.println("<ANY MATCH>");
+        boolean anyMatchList = persons.stream().anyMatch(person -> person.getName().startsWith("J"));
+        System.out.println(anyMatchList);
+        System.out.println("</ANY MATCH>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }

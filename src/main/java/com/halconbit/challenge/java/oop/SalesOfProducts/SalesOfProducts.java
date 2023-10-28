@@ -64,6 +64,8 @@ public class SalesOfProducts {
         // B) Desc.
         lambda.withSortedDesc(persons);
         
+        // 4 - Match (param: Predicate).
+        
     }    
     
 }
