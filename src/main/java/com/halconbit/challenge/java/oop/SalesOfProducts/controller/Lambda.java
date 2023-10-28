@@ -30,9 +30,16 @@ public class Lambda {
     
     public void withFilterMap(List<Person> persons) {
         System.out.println("<FILTER & MAP>");
-        List<Integer> mapList = persons.stream().filter(person -> this.getAge(person.getDateOfBirth()) >= 18).map(person -> this.getAge(person.getDateOfBirth())).collect(Collectors.toList());
-        this.printList(mapList);
+        List<Integer> filterMapList = persons.stream().filter(person -> this.getAge(person.getDateOfBirth()) >= 18).map(person -> this.getAge(person.getDateOfBirth())).collect(Collectors.toList());
+        this.printList(filterMapList);
         System.out.println("</FILTER & MAP>");
+    }
+    
+    public void withMapOnPrefix(List<Person> persons) {
+        System.out.println("<MAP ON PREFIX>");
+        List<String> mapOnPrefixList = persons.stream().map(person -> "Coder " + person.getName()).collect(Collectors.toList());
+        this.printList(mapOnPrefixList);
+        System.out.println("</MAP ON PREFIX>");
     }
     
     public int getAge(LocalDate birthDate) {

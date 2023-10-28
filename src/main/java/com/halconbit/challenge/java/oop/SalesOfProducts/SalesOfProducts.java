@@ -54,6 +54,9 @@ public class SalesOfProducts {
         
         // 2.1 - Filter with map
         lambda.withFilterMap(persons);
+        
+        // 2.2 - Map on prefix
+        lambda.withMapOnPrefix(persons);
     }    
     
 }
