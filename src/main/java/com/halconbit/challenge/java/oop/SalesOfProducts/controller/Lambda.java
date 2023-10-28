@@ -110,10 +110,17 @@ public class Lambda {
     }
     
     public void withGroupByDouble_ClassProduct(List<Product> products) {
-        System.out.println("<GROUP BY>");
+        System.out.println("<GROUP BY: DOUBLE>");
         Map<Double, List<Product>> groupByCollect = products.stream().filter(product -> product.getPriceUnit() > 20.00).collect(Collectors.groupingBy(Product::getPriceUnit));
         System.out.println(groupByCollect);
-        System.out.println("</GROUP BY>");
+        System.out.println("</GROUP BY: DOUBLE>");
+    }
+    
+    public void withGroupByString_ClassProduct(List<Product> products) {
+        System.out.println("<GROUP BY: STRING>");
+        Map<String, List<Product>> groupByCollect = products.stream().filter(product -> product.getPriceUnit() > 20.00).collect(Collectors.groupingBy(Product::getName));
+        System.out.println(groupByCollect);
+        System.out.println("</GROUP BY: STRING>");
     }
     
     public int getAge(LocalDate birthDate) {
