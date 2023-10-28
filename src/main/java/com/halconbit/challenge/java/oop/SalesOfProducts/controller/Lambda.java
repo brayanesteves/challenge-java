@@ -8,17 +8,24 @@ import java.util.stream.Collectors;
 
 public class Lambda {
     
-    public void withForEachLambda(List<Person>  persons) {
+    public void withForEachLambda(List<Person> persons) {
         System.out.println("<FOR EACH - LAMBDA>");
         persons.forEach(System.out::println);
         System.out.println("</FOR EACH - LAMBDA>");
     }
     
-    public void withFilter(List<Person>  persons) {
+    public void withFilter(List<Person> persons) {
         System.out.println("<FILTER>");
-        List<Person> filteredLis = persons.stream().filter(person -> getAge(person.getDateOfBirth()) >= 18).collect(Collectors.toList());
-        this.printList(persons);
+        List<Person> filteredList = persons.stream().filter(person -> getAge(person.getDateOfBirth()) >= 18).collect(Collectors.toList());
+        this.printList(filteredList);
         System.out.println("</FILTER>");
+    }
+    
+    public void withMap(List<Person> persons) {
+        System.out.println("<MAP>");
+        List<Integer> mapList = persons.stream().map(person -> getAge(person.getDateOfBirth())).collect(Collectors.toList());
+        this.printList(mapList);
+        System.out.println("</MAP>");
     }
     
     public int getAge(LocalDate birthDate) {

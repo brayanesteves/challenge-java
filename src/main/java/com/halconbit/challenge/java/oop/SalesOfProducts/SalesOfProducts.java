@@ -4,7 +4,6 @@ import com.halconbit.challenge.java.oop.SalesOfProducts.controller.Functional;
 import com.halconbit.challenge.java.oop.SalesOfProducts.controller.Lambda;
 import com.halconbit.challenge.java.oop.SalesOfProducts.model.Person;
 import com.halconbit.challenge.java.oop.SalesOfProducts.model.Product;
-import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -49,6 +48,10 @@ public class SalesOfProducts {
         
         // 1 - Filter (param: Predicate)
         lambda.withFilter(persons);
+        
+        // 2 - Map (param: Function)
+                
+        
     }    
     
 }
