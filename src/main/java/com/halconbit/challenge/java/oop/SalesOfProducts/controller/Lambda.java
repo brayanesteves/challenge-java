@@ -73,6 +73,13 @@ public class Lambda {
         System.out.println("</ALL MATCH>");
     }
     
+    public void withNoneMatch(List<Person> persons) {
+        System.out.println("<NONE MATCH>");
+        boolean anyMatchList = persons.stream().noneMatch(person -> person.getName().startsWith("J"));
+        System.out.println(anyMatchList);
+        System.out.println("</NONE MATCH>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }

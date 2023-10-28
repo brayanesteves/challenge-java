@@ -69,6 +69,8 @@ public class SalesOfProducts {
         lambda.withAnyMatch(persons);
         // 4.2 - allMatch: Evaluates the entire stream, under the condition. 
         lambda.withAllMatch(persons);
+        // 4.3 - noneMatch: Evaluates the entire stream, under the condition.
+        lambda.withNoneMatch(persons);
         
     }    
     
