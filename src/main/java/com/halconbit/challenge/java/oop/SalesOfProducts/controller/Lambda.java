@@ -66,6 +66,13 @@ public class Lambda {
         System.out.println("</ANY MATCH>");
     }
     
+    public void withAllMatch(List<Person> persons) {
+        System.out.println("<ALL MATCH>");
+        boolean anyMatchList = persons.stream().allMatch(person -> person.getName().startsWith("J"));
+        System.out.println(anyMatchList);
+        System.out.println("</ALL MATCH>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }

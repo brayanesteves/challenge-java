@@ -65,6 +65,10 @@ public class SalesOfProducts {
         lambda.withSortedDesc(persons);
         
         // 4 - Match (param: Predicate).
+        // 4.1 - anyMatch: Does not evaluate the entire stream, finishes on the match.
+        lambda.withAnyMatch(persons);
+        // 4.2 - allMatch: Evaluates the entire stream, under the condition. 
+        lambda.withAllMatch(persons);
         
     }    
     
