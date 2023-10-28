@@ -84,6 +84,13 @@ public class Lambda {
         System.out.println("</NONE MATCH>");
     }
     
+    public void withSkip(List<Person> persons) {
+        System.out.println("<SKIP>");
+        List<Person> skipList = persons.stream().skip(2).collect(Collectors.toList());
+        this.printList(skipList);
+        System.out.println("</SKIP>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
