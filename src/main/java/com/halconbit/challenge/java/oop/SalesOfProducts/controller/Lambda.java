@@ -14,6 +14,8 @@ public class Lambda {
     private Comparator<Person> byNameDesc          = (Person object_1, Person object_2) -> object_2.getName().compareTo(object_1.getName());
     private Comparator<Person> byNameAsc           = (Person object_1, Person object_2) -> object_1.getName().compareTo(object_2.getName());
     private Predicate<Person>  startsWithPredicate = person -> person.getName().startsWith("J");
+    private int                pageNumber          = 0;
+    private int                pageSize            = 2;    
     
     public void withForEachLambda(List<Person> persons) {
         System.out.println("<FOR EACH - LAMBDA>");
@@ -86,16 +88,23 @@ public class Lambda {
     
     public void withSkip(List<Person> persons) {
         System.out.println("<SKIP>");
-        List<Person> skipList = persons.stream().skip(2).collect(Collectors.toList());
+        List<Person> skipList = persons.stream().skip(this.pageNumber).collect(Collectors.toList());
         this.printList(skipList);
         System.out.println("</SKIP>");
     }
     
     public void withLimit(List<Person> persons) {
         System.out.println("<LIMIT>");
-        List<Person> skipList = persons.stream().limit(2).collect(Collectors.toList());
+        List<Person> skipList = persons.stream().limit(this.pageSize).collect(Collectors.toList());
         this.printList(skipList);
         System.out.println("</LIMIT>");
+    }
+    
+    public void withSkipAndLimit(List<Person> persons) {
+        System.out.println("<SKIP & LIMIT>");
+        List<Person> skipList = persons.stream().skip(this.pageNumber * this.pageSize).limit(this.pageSize).collect(Collectors.toList());
+        this.printList(skipList);
+        System.out.println("</SKIP & LIMIT>");
     }
     
     public int getAge(LocalDate birthDate) {

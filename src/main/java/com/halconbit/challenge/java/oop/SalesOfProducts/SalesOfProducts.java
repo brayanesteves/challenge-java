@@ -77,6 +77,8 @@ public class SalesOfProducts {
         lambda.withSkip(persons);
         // 5.2 - Limit.
         lambda.withLimit(persons);
+        // 5.3 - Skip & Limit.
+        lambda.withSkipAndLimit(persons);
         
     }    
     
