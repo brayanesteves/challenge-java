@@ -72,15 +72,15 @@ public class Lambda {
     
     public void withAllMatch(List<Person> persons) {
         System.out.println("<ALL MATCH>");
-        boolean anyMatchList = persons.stream().allMatch(this.startsWithPredicate);
-        System.out.println(anyMatchList);
+        boolean allMatchList = persons.stream().allMatch(this.startsWithPredicate);
+        System.out.println(allMatchList);
         System.out.println("</ALL MATCH>");
     }
     
     public void withNoneMatch(List<Person> persons) {
         System.out.println("<NONE MATCH>");
-        boolean anyMatchList = persons.stream().noneMatch(this.startsWithPredicate);
-        System.out.println(anyMatchList);
+        boolean noneMatchList = persons.stream().noneMatch(this.startsWithPredicate);
+        System.out.println(noneMatchList);
         System.out.println("</NONE MATCH>");
     }
     
