@@ -41,44 +41,44 @@ public class SalesOfProducts {
         functional.withFor(persons);
         functional.withForEach(persons);
         
-        lambda.withForEachLambda(persons);        
+        lambda.withForEachLambda_ClassPerson(persons);        
         
         // Lambda. Method reference.
         // list.forEach(System.out::println);        
         
         // 1 - Filter (param: Predicate).
-        lambda.withFilter(persons);
+        lambda.withFilter_ClassPerson(persons);
         
         // 2 - Map (param: Function).
-        lambda.withMap(persons);
+        lambda.withMap_ClassPerson(persons);
         
         // 2.1 - Filter with map.
-        lambda.withFilterMap(persons);
+        lambda.withFilterMap_ClassPerson(persons);
         
         // 2.2 - Map on prefix.
-        lambda.withMapOnPrefix(persons);
+        lambda.withMapOnPrefix_ClassPerson(persons);
         
         // 3 - Sorted (param: Comparator).
         // A) Asc.
-        lambda.withSortedAsc(persons);
+        lambda.withSortedAsc_ClassPerson(persons);
         // B) Desc.
-        lambda.withSortedDesc(persons);
+        lambda.withSortedDesc_ClassPerson(persons);
         
         // 4 - Match (param: Predicate).
         // 4.1 - anyMatch: Does not evaluate the entire stream, finishes on the match.
-        lambda.withAnyMatch(persons);
+        lambda.withAnyMatch_ClassPerson(persons);
         // 4.2 - allMatch: Evaluates the entire stream, under the condition. 
-        lambda.withAllMatch(persons);
+        lambda.withAllMatch_ClassPerson(persons);
         // 4.3 - noneMatch: Evaluates the entire stream, under the condition.
-        lambda.withNoneMatch(persons);
+        lambda.withNoneMatch_ClassPerson(persons);
         
         // 5 - Limit/Skip.
         // 5.1 - Skip.
-        lambda.withSkip(persons);
+        lambda.withSkip_ClassPerson(persons);
         // 5.2 - Limit.
-        lambda.withLimit(persons);
+        lambda.withLimit_ClassPerson(persons);
         // 5.3 - Skip & Limit.
-        lambda.withSkipAndLimit(persons);
+        lambda.withSkipAndLimit_ClassPerson(persons);
         
     }    
     

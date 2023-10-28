@@ -17,90 +17,97 @@ public class Lambda {
     private int                pageNumber          = 0;
     private int                pageSize            = 2;    
     
-    public void withForEachLambda(List<Person> persons) {
+    public void withForEachLambda_ClassPerson(List<Person> persons) {
         System.out.println("<FOR EACH - LAMBDA>");
         persons.forEach(System.out::println);
         System.out.println("</FOR EACH - LAMBDA>");
     }
     
-    public void withFilter(List<Person> persons) {
+    public void withFilter_ClassPerson(List<Person> persons) {
         System.out.println("<FILTER>");
         List<Person> filteredList = persons.stream().filter(person -> this.getAge(person.getDateOfBirth()) >= 18).collect(Collectors.toList());
         this.printList(filteredList);
         System.out.println("</FILTER>");
     }
     
-    public void withMap(List<Person> persons) {
+    public void withMap_ClassPerson(List<Person> persons) {
         System.out.println("<MAP>");
         List<Integer> mapList = persons.stream().map(person -> this.getAge(person.getDateOfBirth())).collect(Collectors.toList());
         this.printList(mapList);
         System.out.println("</MAP>");
     }
     
-    public void withFilterMap(List<Person> persons) {
+    public void withFilterMap_ClassPerson(List<Person> persons) {
         System.out.println("<FILTER & MAP>");
         List<Integer> filterMapList = persons.stream().filter(person -> this.getAge(person.getDateOfBirth()) >= 18).map(person -> this.getAge(person.getDateOfBirth())).collect(Collectors.toList());
         this.printList(filterMapList);
         System.out.println("</FILTER & MAP>");
     }
     
-    public void withMapOnPrefix(List<Person> persons) {
+    public void withMapOnPrefix_ClassPerson(List<Person> persons) {
         System.out.println("<MAP ON PREFIX>");
         List<String> mapOnPrefixList = persons.stream().map(person -> "Coder " + person.getName()).collect(Collectors.toList());
         this.printList(mapOnPrefixList);
         System.out.println("</MAP ON PREFIX>");
     }
     
-    public void withSortedAsc(List<Person> persons) {
+    public void withSortedAsc_ClassPerson(List<Person> persons) {
         System.out.println("<SORTED: ASC>");
         List<Person> sortedList = persons.stream().sorted(this.byNameAsc).collect(Collectors.toList());
         this.printList(sortedList);
         System.out.println("</SORTED: ASC>");
     }
     
-    public void withSortedDesc(List<Person> persons) {
+    public void withSortedDesc_ClassPerson(List<Person> persons) {
         System.out.println("<SORTED: DESC>");
         List<Person> sortedList = persons.stream().sorted(this.byNameDesc).collect(Collectors.toList());
         this.printList(sortedList);
         System.out.println("</SORTED: DESC>");
     }
     
-    public void withAnyMatch(List<Person> persons) {
+    public void withAnyMatch_ClassPerson(List<Person> persons) {
         System.out.println("<ANY MATCH>");
         boolean anyMatchList = persons.stream().anyMatch(this.startsWithPredicate);
         System.out.println(anyMatchList);
         System.out.println("</ANY MATCH>");
     }
     
-    public void withAllMatch(List<Person> persons) {
+    public void withAllMatch_ClassPerson(List<Person> persons) {
         System.out.println("<ALL MATCH>");
         boolean allMatchList = persons.stream().allMatch(this.startsWithPredicate);
         System.out.println(allMatchList);
         System.out.println("</ALL MATCH>");
     }
     
-    public void withNoneMatch(List<Person> persons) {
+    public void withNoneMatch_ClassPerson(List<Person> persons) {
         System.out.println("<NONE MATCH>");
         boolean noneMatchList = persons.stream().noneMatch(this.startsWithPredicate);
         System.out.println(noneMatchList);
         System.out.println("</NONE MATCH>");
     }
     
-    public void withSkip(List<Person> persons) {
+    public void withSkip_ClassPerson(List<Person> persons) {
         System.out.println("<SKIP>");
         List<Person> skipList = persons.stream().skip(this.pageNumber).collect(Collectors.toList());
         this.printList(skipList);
         System.out.println("</SKIP>");
     }
     
-    public void withLimit(List<Person> persons) {
+    public void withLimit_ClassPerson(List<Person> persons) {
         System.out.println("<LIMIT>");
         List<Person> skipList = persons.stream().limit(this.pageSize).collect(Collectors.toList());
         this.printList(skipList);
         System.out.println("</LIMIT>");
     }
     
-    public void withSkipAndLimit(List<Person> persons) {
+    public void withSkipAndLimit_ClassPerson(List<Person> persons) {
+        System.out.println("<SKIP & LIMIT>");
+        List<Person> skipList = persons.stream().skip(this.pageNumber * this.pageSize).limit(this.pageSize).collect(Collectors.toList());
+        this.printList(skipList);
+        System.out.println("</SKIP & LIMIT>");
+    }
+    
+    public void withGroupBy_ClassProduct(List<Person> persons) {
         System.out.println("<SKIP & LIMIT>");
         List<Person> skipList = persons.stream().skip(this.pageNumber * this.pageSize).limit(this.pageSize).collect(Collectors.toList());
         this.printList(skipList);
