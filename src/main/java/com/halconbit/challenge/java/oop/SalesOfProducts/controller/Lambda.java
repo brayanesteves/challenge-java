@@ -5,9 +5,15 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Lambda {
+    
+    // Variables 'Global'.
+    private Comparator<Person> byNameDesc          = (Person object_1, Person object_2) -> object_2.getName().compareTo(object_1.getName());
+    private Comparator<Person> byNameAsc           = (Person object_1, Person object_2) -> object_1.getName().compareTo(object_2.getName());
+    private Predicate<Person>  startsWithPredicate = person -> person.getName().startsWith("J");
     
     public void withForEachLambda(List<Person> persons) {
         System.out.println("<FOR EACH - LAMBDA>");
@@ -45,37 +51,35 @@ public class Lambda {
     
     public void withSortedAsc(List<Person> persons) {
         System.out.println("<SORTED: ASC>");
-        Comparator<Person> byNameAsc = (Person object_1, Person object_2) -> object_1.getName().compareTo(object_2.getName());
-        List<Person> sortedList      = persons.stream().sorted(byNameAsc).collect(Collectors.toList());
+        List<Person> sortedList = persons.stream().sorted(this.byNameAsc).collect(Collectors.toList());
         this.printList(sortedList);
         System.out.println("</SORTED: ASC>");
     }
     
     public void withSortedDesc(List<Person> persons) {
         System.out.println("<SORTED: DESC>");
-        Comparator<Person> byNameDesc = (Person object_1, Person object_2) -> object_2.getName().compareTo(object_1.getName());
-        List<Person> sortedList       = persons.stream().sorted(byNameDesc).collect(Collectors.toList());
+        List<Person> sortedList = persons.stream().sorted(this.byNameDesc).collect(Collectors.toList());
         this.printList(sortedList);
         System.out.println("</SORTED: DESC>");
     }
     
     public void withAnyMatch(List<Person> persons) {
         System.out.println("<ANY MATCH>");
-        boolean anyMatchList = persons.stream().anyMatch(person -> person.getName().startsWith("J"));
+        boolean anyMatchList = persons.stream().anyMatch(this.startsWithPredicate);
         System.out.println(anyMatchList);
         System.out.println("</ANY MATCH>");
     }
     
     public void withAllMatch(List<Person> persons) {
         System.out.println("<ALL MATCH>");
-        boolean anyMatchList = persons.stream().allMatch(person -> person.getName().startsWith("J"));
+        boolean anyMatchList = persons.stream().allMatch(this.startsWithPredicate);
         System.out.println(anyMatchList);
         System.out.println("</ALL MATCH>");
     }
     
     public void withNoneMatch(List<Person> persons) {
         System.out.println("<NONE MATCH>");
-        boolean anyMatchList = persons.stream().noneMatch(person -> person.getName().startsWith("J"));
+        boolean anyMatchList = persons.stream().noneMatch(this.startsWithPredicate);
         System.out.println(anyMatchList);
         System.out.println("</NONE MATCH>");
     }
