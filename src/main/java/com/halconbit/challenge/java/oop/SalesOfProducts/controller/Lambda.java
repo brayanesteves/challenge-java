@@ -5,6 +5,7 @@ import com.halconbit.challenge.java.oop.SalesOfProducts.model.Product;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
@@ -135,6 +136,13 @@ public class Lambda {
         Map<String, Double> countingCollect = products.stream().collect(Collectors.groupingBy(Product::getName, Collectors.summingDouble(Product::getPriceUnit)));
         System.out.println(countingCollect);
         System.out.println("</GROUP BY & SUMMING: DOUBLE>");
+    }
+    
+    public void gettingSumAndSummaryWithDouble_ClassProduct(List<Product> products) {
+        System.out.println("<SUMMARIZING: DOUBLE SUMMARY STATISTICS>");
+        DoubleSummaryStatistics statistics = products.stream().collect(Collectors.summarizingDouble(Product::getPriceUnit));
+        System.out.println(statistics);
+        System.out.println("</SUMMARIZING: DOUBLE SUMMARY STATISTICS>");
     }
     
     public int getAge(LocalDate birthDate) {
