@@ -91,6 +91,13 @@ public class Lambda {
         System.out.println("</SKIP>");
     }
     
+    public void withLimit(List<Person> persons) {
+        System.out.println("<LIMIT>");
+        List<Person> skipList = persons.stream().limit(2).collect(Collectors.toList());
+        this.printList(skipList);
+        System.out.println("</LIMIT>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }

@@ -72,8 +72,11 @@ public class SalesOfProducts {
         // 4.3 - noneMatch: Evaluates the entire stream, under the condition.
         lambda.withNoneMatch(persons);
         
-        // 5 - Limit/Skip
+        // 5 - Limit/Skip.
+        // 5.1 - Skip.
         lambda.withSkip(persons);
+        // 5.2 - Limit.
+        lambda.withLimit(persons);
         
     }    
     
