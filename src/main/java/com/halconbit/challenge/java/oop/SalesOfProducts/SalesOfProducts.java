@@ -57,6 +57,10 @@ public class SalesOfProducts {
         
         // 2.2 - Map on prefix
         lambda.withMapOnPrefix(persons);
+        
+        // 3 - Sorted (param: Comparator)
+        lambda.withSorted(persons);
+        
     }    
     
 }

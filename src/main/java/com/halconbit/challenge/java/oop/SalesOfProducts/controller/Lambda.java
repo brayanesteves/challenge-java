@@ -3,6 +3,7 @@ package com.halconbit.challenge.java.oop.SalesOfProducts.controller;
 import com.halconbit.challenge.java.oop.SalesOfProducts.model.Person;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,6 +41,14 @@ public class Lambda {
         List<String> mapOnPrefixList = persons.stream().map(person -> "Coder " + person.getName()).collect(Collectors.toList());
         this.printList(mapOnPrefixList);
         System.out.println("</MAP ON PREFIX>");
+    }
+    
+    public void withSorted(List<Person> persons) {
+        System.out.println("<SORTED>");
+        Comparator<Person> byNameAsc = (Person object_1, Person object_2) -> object_1.getName().compareTo(object_2.getName());
+        List<Person> sortedList = persons.stream().sorted(byNameAsc).collect(Collectors.toList());
+        this.printList(sortedList);
+        System.out.println("</SORTED>");
     }
     
     public int getAge(LocalDate birthDate) {
