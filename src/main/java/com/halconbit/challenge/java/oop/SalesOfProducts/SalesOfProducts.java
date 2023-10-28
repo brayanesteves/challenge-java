@@ -48,7 +48,7 @@ public class SalesOfProducts {
         // list.forEach(System.out::println);        
         
         // 1 - Filter (param: Predicate)
-        
+        lambda.withFilter(persons);
     }    
     
 }
