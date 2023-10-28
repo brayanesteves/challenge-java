@@ -16,14 +16,14 @@ public class Lambda {
     
     public void withFilter(List<Person> persons) {
         System.out.println("<FILTER>");
-        List<Person> filteredList = persons.stream().filter(person -> getAge(person.getDateOfBirth()) >= 18).collect(Collectors.toList());
+        List<Person> filteredList = persons.stream().filter(person -> this.getAge(person.getDateOfBirth()) >= 18).collect(Collectors.toList());
         this.printList(filteredList);
         System.out.println("</FILTER>");
     }
     
     public void withMap(List<Person> persons) {
         System.out.println("<MAP>");
-        List<Integer> mapList = persons.stream().map(person -> getAge(person.getDateOfBirth())).collect(Collectors.toList());
+        List<Integer> mapList = persons.stream().map(person -> this.getAge(person.getDateOfBirth())).collect(Collectors.toList());
         this.printList(mapList);
         System.out.println("</MAP>");
     }
