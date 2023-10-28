@@ -82,8 +82,13 @@ public class SalesOfProducts {
         
         // 6 - Collectors.
         // 6.1 - GroupBy.
+        // A) Double.
         lambda.withGroupByDouble_ClassProduct(products);
+        // B) String.
         lambda.withGroupByString_ClassProduct(products);
+        // 6.2 - Counting.
+        
+        
     }    
     
 }

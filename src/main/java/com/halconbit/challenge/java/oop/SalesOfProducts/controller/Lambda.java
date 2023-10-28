@@ -123,6 +123,13 @@ public class Lambda {
         System.out.println("</GROUP BY: STRING>");
     }
     
+    public void withCountingLong_ClassProduct(List<Product> products) {
+        System.out.println("<COUNTING: LONG>");
+        Map<String, Long> countingCollect = products.stream().collect(Collectors.groupingBy(Product::getName, Collectors.counting()));
+        System.out.println(countingCollect);
+        System.out.println("</COUNTING: LONG>");
+    }
+    
     public int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
