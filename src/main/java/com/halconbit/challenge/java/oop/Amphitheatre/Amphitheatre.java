@@ -1,5 +1,10 @@
 package com.halconbit.challenge.java.oop.Amphitheatre;
 
+import com.halconbit.challenge.java.oop.Amphitheatre.logic.Ticket;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 /**
  * @author Brayan Esteves
  * Challenge:
@@ -53,6 +58,23 @@ package com.halconbit.challenge.java.oop.Amphitheatre;
 public class Amphitheatre {
     
     public static void main(String[] args) {
+        
+        // Database logic.
+        List<Ticket> listTickets = new ArrayList<Ticket>();
+        
+        Ticket ticket_0 = new Ticket(12, 2, 3, new Date(), new Date(), 1500);
+        Ticket ticket_1 = new Ticket(12, 2, 3, new Date(), new Date(), 1500);
+        Ticket ticket_2 = new Ticket();
+        ticket_2.setNumber(20);
+        ticket_2.setRow(5);
+        ticket_2.setSeat(1);
+        ticket_2.setPurchaseDate(new Date());
+        ticket_2.setValidityDate(new Date());
+        ticket_2.setPrice(2300);
+        
+        listTickets.add(ticket_0);
+        listTickets.add(ticket_1);
+        listTickets.add(ticket_2);
         
     }
     
