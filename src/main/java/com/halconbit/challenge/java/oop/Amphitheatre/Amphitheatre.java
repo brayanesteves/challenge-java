@@ -1,5 +1,6 @@
 package com.halconbit.challenge.java.oop.Amphitheatre;
 
+import com.halconbit.challenge.java.oop.Amphitheatre.logic.Customer;
 import com.halconbit.challenge.java.oop.Amphitheatre.logic.Ticket;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,7 +28,7 @@ import java.util.Scanner;
  * 5) Considerations: Neither GUI nor DB implementation is necessary. 100% logical
  *    handling of application development will be evaluated.
  * 6) Extra: In case you want to add a "template" for clients with the following
- *    data: id, identity document, name, surname. How would it be implemented?
+ *    data: id, identity document, name, lastname. How would it be implemented?
  *    In what way would it relate to the ticket so that it has the data of the
  *    client assigned to it? Carry out the implementation.
  * [=======]
@@ -103,6 +104,18 @@ public class Amphitheatre {
         if(!flag) {
             System.out.println("Not found data in the row.");
         }
+        
+        // Point Extra.
+        Customer customer = new Customer();
+        customer.setId(1);
+        customer.setName("Brayan");
+        customer.setLastname("Esteves");
+        customer.setIdentityDocument("V-0123456-7");
+        customer.getListTicket().add(ticket_0);
+        
+        Ticket ticket_3 = new Ticket(12, 4, 6, new Date("2023-11-10"), new Date(), 2000);
+        customer.getListTicket().add(ticket_3);        
+        
     }
     
 }

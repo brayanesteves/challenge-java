@@ -8,16 +8,16 @@ import java.util.Date;
  */
 public class Ticket {
     
-    private int    number;
-    private int    row;
-    private int    seat;
-    private Date   purchaseDate;
-    private Date   validityDate;
-    private double price;
+    private int      number;
+    private int      row;
+    private int      seat;
+    private Date     purchaseDate;
+    private Date     validityDate;
+    private double   price;
 
     public Ticket() {
     }
-
+    
     public Ticket(int number, int row, int seat, Date purchaseDate, Date validityDate, double price) {
         this.number       = number;
         this.row          = row;
