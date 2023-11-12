@@ -4,6 +4,7 @@ import com.halconbit.challenge.java.oop.Amphitheatre.logic.Ticket;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * @author Brayan Esteves
@@ -65,7 +66,7 @@ public class Amphitheatre {
         
         // Point 2.
         Ticket ticket_0 = new Ticket(12, 2, 3, new Date(), new Date(), 1500);
-        Ticket ticket_1 = new Ticket(12, 2, 3, new Date(), new Date(), 1500);
+        Ticket ticket_1 = new Ticket(13, 2, 4, new Date(), new Date(), 1500);
         Ticket ticket_2 = new Ticket();
         ticket_2.setNumber(20);
         ticket_2.setRow(5);
@@ -86,6 +87,22 @@ public class Amphitheatre {
         }
         System.out.println("Sums the price is: " + sumsTheTicket);
         
+        // Point 4.
+        // Search ticket.
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter row at search.");
+        int     row  = keyboard.nextInt();
+        boolean flag = false;
+        for(Ticket ticket : listTickets) {
+            if(ticket.getRow() == row) {
+                System.out.println(ticket.toString());
+                flag = true;
+            }
+        }
+        
+        if(!flag) {
+            System.out.println("Not found data in the row.");
+        }
     }
     
 }
