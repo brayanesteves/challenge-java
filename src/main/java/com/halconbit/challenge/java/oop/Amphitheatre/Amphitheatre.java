@@ -51,12 +51,9 @@ package com.halconbit.challenge.java.oop.Amphitheatre;
  *    del cliente que tiene asignado? Realizar la implementación.
  */
 public class Amphitheatre {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }
