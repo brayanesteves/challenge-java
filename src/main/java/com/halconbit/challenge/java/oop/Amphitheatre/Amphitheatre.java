@@ -59,9 +59,11 @@ public class Amphitheatre {
     
     public static void main(String[] args) {
         
+        // Point 1.
         // Database logic.
         List<Ticket> listTickets = new ArrayList<Ticket>();
         
+        // Point 2.
         Ticket ticket_0 = new Ticket(12, 2, 3, new Date(), new Date(), 1500);
         Ticket ticket_1 = new Ticket(12, 2, 3, new Date(), new Date(), 1500);
         Ticket ticket_2 = new Ticket();
@@ -75,6 +77,14 @@ public class Amphitheatre {
         listTickets.add(ticket_0);
         listTickets.add(ticket_1);
         listTickets.add(ticket_2);
+        
+        // Point 3.
+        // Sums the price.
+        double sumsTheTicket = 0;
+        for(Ticket ticket : listTickets) {
+            sumsTheTicket = sumsTheTicket + ticket.getPrice();
+        }
+        System.out.println("Sums the price is: " + sumsTheTicket);
         
     }
     
