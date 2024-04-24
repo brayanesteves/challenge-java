@@ -7,6 +7,8 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.IncrementByFiveInterfaceLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.IncrementByFiveTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.interfaces.ConcatenateInterface;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleLambda;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleTraditional;
 
 /**
  *
@@ -24,6 +26,9 @@ public class Main {
         System.out.println();
         ConcatenateTraditional concatenateTraditional = new ConcatenateTraditional();
         System.out.println(concatenateTraditional.sconcat("Hello", "World!"));
+        System.out.println("TRADITIONAL RUNNABLE");
+        RunnableExampleTraditional runnableExample = new RunnableExampleTraditional();
+        runnableExample.runnableExample();
         System.out.println("====================");
         
         System.out.println("====================");
@@ -40,6 +45,10 @@ public class Main {
         ConcatenateLambda concatenateLambda = new ConcatenateLambda();
         System.out.println(concatenateLambda.Concatenate("Hello", "World!"));
         System.out.println(concatenateLambda.ConcatenateSingle("Hello", "World!"));
+        System.out.println("LAMBDA RUNNABLE");
+        RunnableExampleLambda runnableExampleLambda = new RunnableExampleLambda();
+        runnableExampleLambda.runnableExample();
+        runnableExampleLambda.threadExampleWithLambda();
         System.out.println("====================");
         
     }
