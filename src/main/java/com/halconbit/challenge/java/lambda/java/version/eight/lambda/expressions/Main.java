@@ -15,41 +15,67 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
  * @author Brayan Esteves
  */
 public class Main {
-    public static void main(String[] args) {
+    
+    // ==================== //
+    // TRADITIONAL //
+    private static HelloWorldTraditional helloWorldTraditional;
+    private static IncrementByFiveTraditional incrementByFiveTraditional;
+    private static ConcatenateTraditional concatenateTraditional;
+    // TRADITIONAL RUNNABLE //
+    private static RunnableExampleTraditional runnableExample;
+    // ==================== //
+    // LAMBDA //
+    private static HelloWorldLambda helloWorldLambda;
+    private static IncrementByFiveInterfaceLambda incrementByFiveInterfaceLambda;
+    private static ConcatenateLambda concatenateLambda;
+    // LAMBDA RUNNABLE //
+    private static RunnableExampleLambda runnableExampleLambda;
+    // ==================== //
+    
+    public Main() {
+        // ==================== //
+        // TRADITIONAL //
+        helloWorldTraditional = new HelloWorldTraditional();
+        incrementByFiveTraditional = new IncrementByFiveTraditional();
+        concatenateTraditional = new ConcatenateTraditional();
+        // TRADITIONAL RUNNABLE //
+        runnableExample = new RunnableExampleTraditional();
+        // ==================== //
+        // LAMBDA //
+        helloWorldLambda = new HelloWorldLambda();
+        incrementByFiveInterfaceLambda = new IncrementByFiveInterfaceLambda();
+        concatenateLambda = new ConcatenateLambda();
+        // LAMBDA RUNNABLE //
+        runnableExampleLambda = new RunnableExampleLambda();
+        // ==================== //
+    }
+    
+    public static void main(String[] args) {        
         System.out.println("====================");
-        System.out.println("TRADITIONAL");
-        HelloWorldTraditional helloWorldTraditional = new HelloWorldTraditional();
-        System.out.println(helloWorldTraditional.sayHelloWorld());
-        System.out.println();
-        IncrementByFiveTraditional incrementByFiveTraditional = new IncrementByFiveTraditional();
-        System.out.println(incrementByFiveTraditional.incrementByFive(2));
-        System.out.println();
-        ConcatenateTraditional concatenateTraditional = new ConcatenateTraditional();
-        System.out.println(concatenateTraditional.sconcat("Hello", "World!"));
-        System.out.println("TRADITIONAL RUNNABLE");
-        RunnableExampleTraditional runnableExample = new RunnableExampleTraditional();
-        runnableExample.runnableExample();
+        System.out.println("TRADITIONAL");        
+        System.out.println(Main.helloWorldTraditional.sayHelloWorld());
+        System.out.println();        
+        System.out.println(Main.incrementByFiveTraditional.incrementByFive(2));
+        System.out.println();        
+        System.out.println(Main.concatenateTraditional.sconcat("Hello", "World!"));
+        System.out.println("TRADITIONAL RUNNABLE");        
+        Main.runnableExample.runnableExample();
         System.out.println("====================");
         
         System.out.println("====================");
-        System.out.println("LAMBDA");
-        HelloWorldLambda helloWorldLambda = new HelloWorldLambda();
-        System.out.println(helloWorldLambda.HelloWorldInterface());
+        System.out.println("LAMBDA");        
+        System.out.println(Main.helloWorldLambda.HelloWorldInterface());
         System.out.println();
-        System.out.println(helloWorldLambda.HelloWorldInterfaceSingle()); 
-        System.out.println();
-        IncrementByFiveInterfaceLambda incrementByFiveInterfaceLambda = new IncrementByFiveInterfaceLambda();
-        System.out.println(incrementByFiveInterfaceLambda.IncrementByFive(2));
-        System.out.println(incrementByFiveInterfaceLambda.IncrementByFiveSingle(2));
-        System.out.println();
-        ConcatenateLambda concatenateLambda = new ConcatenateLambda();
-        System.out.println(concatenateLambda.Concatenate("Hello", "World!"));
-        System.out.println(concatenateLambda.ConcatenateSingle("Hello", "World!"));
-        System.out.println("LAMBDA RUNNABLE");
-        RunnableExampleLambda runnableExampleLambda = new RunnableExampleLambda();
-        runnableExampleLambda.runnableExample();
-        runnableExampleLambda.threadExampleWithLambda();
-        System.out.println("====================");
-        
+        System.out.println(Main.helloWorldLambda.HelloWorldInterfaceSingle()); 
+        System.out.println();        
+        System.out.println(Main.incrementByFiveInterfaceLambda.IncrementByFive(2));
+        System.out.println(Main.incrementByFiveInterfaceLambda.IncrementByFiveSingle(2));
+        System.out.println();        
+        System.out.println(Main.concatenateLambda.Concatenate("Hello", "World!"));
+        System.out.println(Main.concatenateLambda.ConcatenateSingle("Hello", "World!"));
+        System.out.println("LAMBDA RUNNABLE");        
+        Main.runnableExampleLambda.runnableExample();
+        Main.runnableExampleLambda.threadExampleWithLambda();
+        System.out.println("====================");        
     }
 }
