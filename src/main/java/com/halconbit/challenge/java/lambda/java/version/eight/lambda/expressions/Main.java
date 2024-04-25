@@ -2,6 +2,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expression
 
 import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.consumer.ConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.ConcatenateTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.HelloWorldLambda;
@@ -35,25 +36,29 @@ public class Main {
     private static RunnableExampleLambda runnableExampleLambda;
     // LAMBDA CALLABLE //
     private static SumOfNumberUsingCallable sumOfNumberUsingCallable;
+    // CONSUMER //
+    private static ConsumerExample consumerExample;
     // ==================== //
     
     public Main() {
         // ==================== //
-        // TRADITIONAL //
+        // TRADITIONAL. //
         helloWorldTraditional      = new HelloWorldTraditional();
         incrementByFiveTraditional = new IncrementByFiveTraditional();
         concatenateTraditional     = new ConcatenateTraditional();
-        // TRADITIONAL RUNNABLE //
+        // TRADITIONAL RUNNABLE. //
         runnableExample = new RunnableExampleTraditional();
         // ==================== //
-        // LAMBDA //
+        // LAMBDA. //
         helloWorldLambda               = new HelloWorldLambda();
         incrementByFiveInterfaceLambda = new IncrementByFiveInterfaceLambda();
         concatenateLambda              = new ConcatenateLambda();
-        // LAMBDA RUNNABLE //
+        // LAMBDA RUNNABLE. //
         runnableExampleLambda = new RunnableExampleLambda();
-        // LAMBDA CALLABLE //
+        // LAMBDA CALLABLE. //
         sumOfNumberUsingCallable = new SumOfNumberUsingCallable();
+        // CONSUMER. //
+        consumerExample = new ConsumerExample();
         // ==================== //
     }
     
@@ -89,6 +94,8 @@ public class Main {
         } catch (InterruptedException | ExecutionException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Main.consumerExample.consumerString();
+        Main.consumerExample.consumerInteger();
         System.out.println("====================");        
     }
 }
