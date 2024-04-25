@@ -106,6 +106,10 @@ public class Main {
         Main.consumerExample.biConsumer_PrintingTwoNumbers(2, 4);
         Main.consumerExample.biConsumer_CalculatingTwoNumbers(2, 4);
         Main.consumerExample.biConsumer_ConcatenateString("Fell on", "deaf ears");
+        
+        Main.consumerExample.biConsumer_PrintNameAndGender();
+        Main.consumerExample.biConsumer_PrintNameAndListCourses();
+        Main.consumerExample.biConsumer_PrintNameAndGenderAllInstructors();
         System.out.println("====================");
     }
 }

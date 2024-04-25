@@ -89,5 +89,28 @@ public class ConsumerExample {
         BiConsumer<String, String> biConsumer = (x, y) -> System.out.println(x + y);
         biConsumer.accept(a, b);
     }
+    
+    public void biConsumer_PrintNameAndGender() {
+        // Print out name and gender of instructors.
+        List<Instructor> instructors = InstructorController.getAll();        
+        BiConsumer<String, String> biConsumer = (name, gender) -> System.out.println("Name is: " + name + " and gender is: " + gender);
+        instructors.forEach(instructor -> biConsumer.accept(instructor.getName(), instructor.getGender()));
+    }
+    
+    public void biConsumer_PrintNameAndListCourses() {
+        // Print out name and gender of instructors.
+        List<Instructor> instructors = InstructorController.getAll();        
+        BiConsumer<String, List<String>> biConsumer = (name, courses) -> System.out.println("Name is: " + name + " and courses is: " + courses);
+        instructors.forEach(instructor -> biConsumer.accept(instructor.getName(), instructor.getCourses()));
+    }
+    
+    public void biConsumer_PrintNameAndGenderAllInstructors() {
+        // Print out name and gender of all instructors who teaches online.
+        List<Instructor> instructors = InstructorController.getAll();
+        BiConsumer<String, String> biConsumer = null;
+        instructors.forEach(instructor -> {
+            biConsumer.accept(instructor.getName(), instructor.getGender());
+        });
+    }
     // <.BI CONSUMER> //
 }
