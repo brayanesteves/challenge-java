@@ -1,14 +1,17 @@
 package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions;
 
 import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.ConcatenateTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.HelloWorldLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.IncrementByFiveInterfaceLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.IncrementByFiveTraditional;
-import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.interfaces.ConcatenateInterface;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleTraditional;
+import java.util.concurrent.ExecutionException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,23 +33,27 @@ public class Main {
     private static ConcatenateLambda concatenateLambda;
     // LAMBDA RUNNABLE //
     private static RunnableExampleLambda runnableExampleLambda;
+    // LAMBDA CALLABLE //
+    private static SumOfNumberUsingCallable sumOfNumberUsingCallable;
     // ==================== //
     
     public Main() {
         // ==================== //
         // TRADITIONAL //
-        helloWorldTraditional = new HelloWorldTraditional();
+        helloWorldTraditional      = new HelloWorldTraditional();
         incrementByFiveTraditional = new IncrementByFiveTraditional();
-        concatenateTraditional = new ConcatenateTraditional();
+        concatenateTraditional     = new ConcatenateTraditional();
         // TRADITIONAL RUNNABLE //
         runnableExample = new RunnableExampleTraditional();
         // ==================== //
         // LAMBDA //
-        helloWorldLambda = new HelloWorldLambda();
+        helloWorldLambda               = new HelloWorldLambda();
         incrementByFiveInterfaceLambda = new IncrementByFiveInterfaceLambda();
-        concatenateLambda = new ConcatenateLambda();
+        concatenateLambda              = new ConcatenateLambda();
         // LAMBDA RUNNABLE //
         runnableExampleLambda = new RunnableExampleLambda();
+        // LAMBDA CALLABLE //
+        sumOfNumberUsingCallable = new SumOfNumberUsingCallable();
         // ==================== //
     }
     
@@ -76,6 +83,12 @@ public class Main {
         System.out.println("LAMBDA RUNNABLE");        
         Main.runnableExampleLambda.runnableExample();
         Main.runnableExampleLambda.threadExampleWithLambda();
+        System.out.println("LAMBDA CALLABLE");        
+        try {
+            Main.sumOfNumberUsingCallable.callableLambda();
+        } catch (InterruptedException | ExecutionException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
         System.out.println("====================");        
     }
 }
