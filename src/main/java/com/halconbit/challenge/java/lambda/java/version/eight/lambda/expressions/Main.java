@@ -98,6 +98,10 @@ public class Main {
         Main.consumerExample.consumerString();
         Main.consumerExample.consumerInteger();
         Main.consumerExample.consumerObjectInstructor();
+        
+        Main.consumerExample.intConsumer();
+        Main.consumerExample.longConsumer();
+        Main.consumerExample.doubleConsumer();
         System.out.println("====================");
     }
 }

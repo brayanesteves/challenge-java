@@ -4,6 +4,9 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.models.Instructor;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.DoubleConsumer;
+import java.util.function.IntConsumer;
+import java.util.function.LongConsumer;
 
 public class ConsumerExample {
     public void consumerString() {
@@ -50,5 +53,20 @@ public class ConsumerExample {
                 consumerZero.andThen(consumerOne).accept(s1);
             }
         });
+    }
+    
+    public void intConsumer() {
+        IntConsumer intConsumer = (a) -> System.out.println(a * 10);
+        intConsumer.accept(10);
+    }
+    
+    public void longConsumer() {
+        LongConsumer longConsumer = (a) -> System.out.println(a * 10L);
+        longConsumer.accept(10);
+    }
+    
+    public void doubleConsumer() {
+        DoubleConsumer doubleConsumer = (a) -> System.out.println(a * 10);
+        doubleConsumer.accept(10.50);
     }
 }
