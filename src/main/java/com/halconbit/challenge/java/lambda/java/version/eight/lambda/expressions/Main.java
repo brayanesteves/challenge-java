@@ -102,6 +102,10 @@ public class Main {
         Main.consumerExample.intConsumer();
         Main.consumerExample.longConsumer();
         Main.consumerExample.doubleConsumer();
+        
+        Main.consumerExample.biConsumer_PrintingTwoNumbers(2, 4);
+        Main.consumerExample.biConsumer_CalculatingTwoNumbers(2, 4);
+        Main.consumerExample.biConsumer_ConcatenateString("Fell on", "deaf ears");
         System.out.println("====================");
     }
 }

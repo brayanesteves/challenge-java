@@ -3,6 +3,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expression
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.controller.InstructorController;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.models.Instructor;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.DoubleConsumer;
 import java.util.function.IntConsumer;
@@ -69,4 +70,24 @@ public class ConsumerExample {
         DoubleConsumer doubleConsumer = (a) -> System.out.println(a * 10);
         doubleConsumer.accept(10.50);
     }
+    
+    // <BI CONSUMER> //    
+    public void biConsumer_PrintingTwoNumbers(int a, int b) {
+        // Printing two numbers.
+        BiConsumer<Integer, Integer> biConsumer = (x, y) -> System.out.println("x: " + x + " y: " + y);
+        biConsumer.accept(a, b);
+    }
+    
+    public void biConsumer_CalculatingTwoNumbers(int a, int b) {
+        // Calculating sum of two integers.
+        BiConsumer<Integer, Integer> biConsumer = (x, y) -> System.out.println("x+y: " + (x + y));
+        biConsumer.accept(a, b);
+    }
+    
+    public void biConsumer_ConcatenateString(String a, String b) {
+        // Calculating sum of two integers.
+        BiConsumer<String, String> biConsumer = (x, y) -> System.out.println(x + y);
+        biConsumer.accept(a, b);
+    }
+    // <.BI CONSUMER> //
 }
