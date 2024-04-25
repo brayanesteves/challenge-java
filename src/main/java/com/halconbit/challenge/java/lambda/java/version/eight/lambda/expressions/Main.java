@@ -62,40 +62,42 @@ public class Main {
         // ==================== //
     }
     
-    public static void main(String[] args) {        
+    public static void main(String[] args) {
         System.out.println("====================");
-        System.out.println("TRADITIONAL");        
+        System.out.println("TRADITIONAL");
         System.out.println(Main.helloWorldTraditional.sayHelloWorld());
-        System.out.println();        
+        System.out.println();
         System.out.println(Main.incrementByFiveTraditional.incrementByFive(2));
-        System.out.println();        
+        System.out.println();
         System.out.println(Main.concatenateTraditional.sconcat("Hello", "World!"));
-        System.out.println("TRADITIONAL RUNNABLE");        
+        System.out.println("TRADITIONAL RUNNABLE");
         Main.runnableExample.runnableExample();
         System.out.println("====================");
         
         System.out.println("====================");
-        System.out.println("LAMBDA");        
+        System.out.println("LAMBDA");
         System.out.println(Main.helloWorldLambda.HelloWorldInterface());
         System.out.println();
-        System.out.println(Main.helloWorldLambda.HelloWorldInterfaceSingle()); 
-        System.out.println();        
+        System.out.println(Main.helloWorldLambda.HelloWorldInterfaceSingle());
+        System.out.println();
         System.out.println(Main.incrementByFiveInterfaceLambda.IncrementByFive(2));
         System.out.println(Main.incrementByFiveInterfaceLambda.IncrementByFiveSingle(2));
-        System.out.println();        
+        System.out.println();
         System.out.println(Main.concatenateLambda.Concatenate("Hello", "World!"));
         System.out.println(Main.concatenateLambda.ConcatenateSingle("Hello", "World!"));
-        System.out.println("LAMBDA RUNNABLE");        
+        System.out.println("LAMBDA RUNNABLE");
         Main.runnableExampleLambda.runnableExample();
         Main.runnableExampleLambda.threadExampleWithLambda();
-        System.out.println("LAMBDA CALLABLE");        
+        System.out.println("LAMBDA CALLABLE");
         try {
             Main.sumOfNumberUsingCallable.callableLambda();
         } catch (InterruptedException | ExecutionException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("LAMBDA CONSUMER");
         Main.consumerExample.consumerString();
         Main.consumerExample.consumerInteger();
-        System.out.println("====================");        
+        Main.consumerExample.consumerObjectInstructor();
+        System.out.println("====================");
     }
 }
