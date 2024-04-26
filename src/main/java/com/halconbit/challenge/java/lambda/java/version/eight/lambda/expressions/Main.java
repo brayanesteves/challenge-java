@@ -135,6 +135,8 @@ public class Main {
         Main.predicateExample.doublePredicate();
         System.out.println("PREDICATE & BICONSUMER");
         Main.predicateAndBiConsumerExample.allInstructorWhoTeachesOnline();
+        System.out.println("BIPREDICATE");
+        Main.predicateExample.allInstructorWhoTeachesOnline();
         System.out.println("====================");
     }
 }

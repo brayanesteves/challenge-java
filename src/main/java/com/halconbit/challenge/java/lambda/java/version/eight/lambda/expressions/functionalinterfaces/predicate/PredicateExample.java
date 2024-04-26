@@ -3,6 +3,8 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expression
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.controller.InstructorController;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.models.Instructor;
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.BiPredicate;
 import java.util.function.DoublePredicate;
 import java.util.function.IntPredicate;
 import java.util.function.LongPredicate;
@@ -80,5 +82,21 @@ public class PredicateExample {
         DoublePredicate doublePredicateOne  = (i) -> i > 100.10;
         System.out.println(doublePredicateZero.and(doublePredicateOne).test(100.15));
     }
+    
+    // <BIPREDICATE> //
+    public void allInstructorWhoTeachesOnline() {
+        // All instructor who teaches online.
+        List<Instructor> instructors = InstructorController.getAll();
+        // BiPredicate.
+        BiPredicate<Boolean, Integer> biPredicateZero = (online, experience) -> online == true && experience > 10;
+        // BiConsumer print name and courses.
+        BiConsumer<String, List<String>> biConsumer = (name, courses) -> System.out.println("Name is: " + name + " courses: " + courses);
+        instructors.forEach(instructor -> {
+            if(biPredicateZero.test(instructor.isOnlineCourses(), instructor.getYearsOfExperience())) {
+                biConsumer.accept(instructor.getName(), instructor.getCourses());
+            }
+        });
+    }
+    // <.BIPREDICATE> //
     
 }
