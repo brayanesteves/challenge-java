@@ -1,5 +1,8 @@
 package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate;
 
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.controller.InstructorController;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.models.Instructor;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class PredicateExample {
@@ -30,5 +33,33 @@ public class PredicateExample {
         Predicate<Integer> predicateOne  = (i) -> i % 2 == 0;
         System.out.println(predicateZero.and(predicateOne.negate()).test(33));
     }
+    
+    // <OBJECT> //
+    public void predicate_AllInstructorWhoTeachesOnline() {
+        // All instructor who teaches online.
+        Predicate<Instructor> predicateZero = (i) -> i.isOnlineCourses() == true;
+        // Instructor experience is > 10 years.
+        Predicate<Instructor> predicateOne  = (i) -> i.getYearsOfExperience() > 0;
+        List<Instructor> instructors = InstructorController.getAll();
+        instructors.forEach(instructor -> {
+            if(predicateOne.test(instructor)) {
+                System.out.println(instructor);
+            }
+        });        
+    }
+    
+    public void predicate_IsInstructorTeachesOnlineAndExperienceIsGreatherThanTen() {
+        // Is instructor teaches online and experience is > 10 years.
+        Predicate<Instructor> predicateZero = (i) -> i.isOnlineCourses() == true;
+        // Instructor experience is > 10 years.
+        Predicate<Instructor> predicateOne  = (i) -> i.getYearsOfExperience() > 0;
+        List<Instructor> instructors = InstructorController.getAll();
+        instructors.forEach(instructor -> {
+            if(predicateOne.and(predicateZero).test(instructor)) {
+                System.out.println(instructor);
+            }
+        });        
+    }
+    // <.OBJECT> //
     
 }

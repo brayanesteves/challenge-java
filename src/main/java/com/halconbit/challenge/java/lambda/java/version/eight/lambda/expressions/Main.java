@@ -121,6 +121,9 @@ public class Main {
         Main.predicateExample.predicate_NumberGreatherTenAndNumberIsEvenNumber();
         Main.predicateExample.predicate_NumberGreatherTenOrNumberIsEvenNumber();
         Main.predicateExample.predicate_GreatherThanTenAndNotEqualZero();
+        
+        Main.predicateExample.predicate_AllInstructorWhoTeachesOnline();
+        Main.predicateExample.predicate_IsInstructorTeachesOnlineAndExperienceIsGreatherThanTen();
         System.out.println("====================");
     }
 }
