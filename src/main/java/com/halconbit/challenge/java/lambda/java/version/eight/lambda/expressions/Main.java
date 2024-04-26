@@ -4,6 +4,7 @@ import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.consumer.ConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicateandbiconsumer.PredicateAndBiConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.ConcatenateTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.HelloWorldLambda;
@@ -41,6 +42,8 @@ public class Main {
     private static ConsumerExample consumerExample;
     // PREDICATE. //
     private static PredicateExample predicateExample;
+    // PREDICATE & BICONSUMER //
+    private static PredicateAndBiConsumerExample predicateAndBiConsumerExample;
     // ==================== //
     
     public Main() {
@@ -64,6 +67,8 @@ public class Main {
         consumerExample = new ConsumerExample();
         // PREDICATE //
         predicateExample = new PredicateExample();
+        // PREDICATE & BICONSUMER //
+        predicateAndBiConsumerExample = new PredicateAndBiConsumerExample();
         // ==================== //
     }
     
@@ -128,6 +133,8 @@ public class Main {
         Main.predicateExample.intPredicate();
         Main.predicateExample.longPredicate();
         Main.predicateExample.doublePredicate();
+        System.out.println("PREDICATE & BICONSUMER");
+        Main.predicateAndBiConsumerExample.allInstructorWhoTeachesOnline();
         System.out.println("====================");
     }
 }
