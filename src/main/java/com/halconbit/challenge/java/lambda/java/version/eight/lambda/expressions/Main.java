@@ -3,6 +3,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expression
 import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.consumer.ConsumerExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function.FunctionExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicateandbiconsumer.PredicateAndBiConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
@@ -44,6 +45,8 @@ public class Main {
     private static PredicateExample predicateExample;
     // PREDICATE & BICONSUMER //
     private static PredicateAndBiConsumerExample predicateAndBiConsumerExample;
+    // FUNCTION //
+    private static FunctionExample functionExample;
     // ==================== //
     
     public Main() {
@@ -69,6 +72,8 @@ public class Main {
         predicateExample = new PredicateExample();
         // PREDICATE & BICONSUMER //
         predicateAndBiConsumerExample = new PredicateAndBiConsumerExample();
+        // FUNCTION //
+        functionExample = new FunctionExample();
         // ==================== //
     }
     
@@ -108,19 +113,17 @@ public class Main {
         Main.consumerExample.consumerString();
         Main.consumerExample.consumerInteger();
         Main.consumerExample.consumerObjectInstructor();
-        
+        System.out.println("INT, LONG & DOUBLE (CONSUMER)");
         Main.consumerExample.intConsumer();
         Main.consumerExample.longConsumer();
         Main.consumerExample.doubleConsumer();
-        
+        System.out.println("BICONSUMER");
         Main.consumerExample.biConsumer_PrintingTwoNumbers(2, 4);
         Main.consumerExample.biConsumer_CalculatingTwoNumbers(2, 4);
-        Main.consumerExample.biConsumer_ConcatenateString("Fell on", "deaf ears");
-        
+        Main.consumerExample.biConsumer_ConcatenateString("Fell on", "deaf ears");        
         Main.consumerExample.biConsumer_PrintNameAndGender();
         Main.consumerExample.biConsumer_PrintNameAndListCourses();
-        Main.consumerExample.biConsumer_PrintNameAndGenderAllInstructors();
-        
+        Main.consumerExample.biConsumer_PrintNameAndGenderAllInstructors();        
         System.out.println("LAMBDA PREDICATE");
         Main.predicateExample.predicate_ReturnTrueOrFalse();
         Main.predicateExample.predicate_NumberGreatherTenAndNumberIsEvenNumber();
@@ -129,7 +132,7 @@ public class Main {
         System.out.println("OBJECT");
         Main.predicateExample.predicate_AllInstructorWhoTeachesOnline();
         Main.predicateExample.predicate_IsInstructorTeachesOnlineAndExperienceIsGreatherThanTen();
-        System.out.println("INT, LONG & DOUBLE");
+        System.out.println("INT, LONG & DOUBLE (PREDICATE)");
         Main.predicateExample.intPredicate();
         Main.predicateExample.longPredicate();
         Main.predicateExample.doublePredicate();
@@ -137,6 +140,13 @@ public class Main {
         Main.predicateAndBiConsumerExample.allInstructorWhoTeachesOnline();
         System.out.println("BIPREDICATE");
         Main.predicateExample.allInstructorWhoTeachesOnline();
+        System.out.println("FUNCTION");
+        Main.functionExample.squareRoot(64);
+        Main.functionExample.squareRoot(81);
+        Main.functionExample.toLowerCase("PROGRAMMING");
+        Main.functionExample.concatenate("PROGRAMMING", "In Java");
+        Main.functionExample.toLowerCaseAndConcatenate("PROGRAMMING", "In Java");
+        Main.functionExample.toLowerCaseAndConcatenateWithCompose("PROGRAMMING", "In Java");
         System.out.println("====================");
     }
 }
