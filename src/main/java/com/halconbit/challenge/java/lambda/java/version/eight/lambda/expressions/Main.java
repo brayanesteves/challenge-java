@@ -3,6 +3,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expression
 import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.consumer.ConsumerExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.ConcatenateTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.HelloWorldLambda;
@@ -21,23 +22,25 @@ import java.util.logging.Logger;
 public class Main {
     
     // ==================== //
-    // TRADITIONAL //
+    // TRADITIONAL. //
     private static HelloWorldTraditional helloWorldTraditional;
     private static IncrementByFiveTraditional incrementByFiveTraditional;
     private static ConcatenateTraditional concatenateTraditional;
-    // TRADITIONAL RUNNABLE //
+    // TRADITIONAL RUNNABLE. //
     private static RunnableExampleTraditional runnableExample;
     // ==================== //
-    // LAMBDA //
+    // LAMBDA. //
     private static HelloWorldLambda helloWorldLambda;
     private static IncrementByFiveInterfaceLambda incrementByFiveInterfaceLambda;
     private static ConcatenateLambda concatenateLambda;
-    // LAMBDA RUNNABLE //
+    // LAMBDA RUNNABLE. //
     private static RunnableExampleLambda runnableExampleLambda;
-    // LAMBDA CALLABLE //
+    // LAMBDA CALLABLE. //
     private static SumOfNumberUsingCallable sumOfNumberUsingCallable;
-    // CONSUMER //
+    // CONSUMER. //
     private static ConsumerExample consumerExample;
+    // PREDICATE. //
+    private static PredicateExample predicateExample;
     // ==================== //
     
     public Main() {
@@ -59,6 +62,8 @@ public class Main {
         sumOfNumberUsingCallable = new SumOfNumberUsingCallable();
         // CONSUMER. //
         consumerExample = new ConsumerExample();
+        // PREDICATE //
+        predicateExample = new PredicateExample();
         // ==================== //
     }
     
@@ -110,6 +115,12 @@ public class Main {
         Main.consumerExample.biConsumer_PrintNameAndGender();
         Main.consumerExample.biConsumer_PrintNameAndListCourses();
         Main.consumerExample.biConsumer_PrintNameAndGenderAllInstructors();
+        
+        System.out.println("LAMBDA PREDICATE");
+        Main.predicateExample.predicate_ReturnTrueOrFalse();
+        Main.predicateExample.predicate_NumberGreatherTenAndNumberIsEvenNumber();
+        Main.predicateExample.predicate_NumberGreatherTenOrNumberIsEvenNumber();
+        Main.predicateExample.predicate_GreatherThanTenAndNotEqualZero();
         System.out.println("====================");
     }
 }
