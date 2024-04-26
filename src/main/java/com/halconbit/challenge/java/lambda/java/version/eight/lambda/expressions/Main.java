@@ -121,9 +121,13 @@ public class Main {
         Main.predicateExample.predicate_NumberGreatherTenAndNumberIsEvenNumber();
         Main.predicateExample.predicate_NumberGreatherTenOrNumberIsEvenNumber();
         Main.predicateExample.predicate_GreatherThanTenAndNotEqualZero();
-        
+        System.out.println("OBJECT");
         Main.predicateExample.predicate_AllInstructorWhoTeachesOnline();
         Main.predicateExample.predicate_IsInstructorTeachesOnlineAndExperienceIsGreatherThanTen();
+        System.out.println("INT, LONG & DOUBLE");
+        Main.predicateExample.intPredicate();
+        Main.predicateExample.longPredicate();
+        Main.predicateExample.doublePredicate();
         System.out.println("====================");
     }
 }
