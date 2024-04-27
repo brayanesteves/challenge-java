@@ -150,6 +150,8 @@ public class Main {
         System.out.println("OBJECT");
         Main.functionExample.mapOfInstructorsWithNameAndYearsOfExperience();
         Main.functionExample.mapOfInstructorsWithNameAndYearsOfExperiencePredicate();
+        System.out.println("BIFUNCTION");
+        Main.functionExample.biFunction_TwoInputs();
         System.out.println("====================");
     }
 }
