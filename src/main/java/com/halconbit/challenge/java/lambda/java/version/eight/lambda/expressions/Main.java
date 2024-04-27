@@ -147,6 +147,9 @@ public class Main {
         Main.functionExample.concatenate("PROGRAMMING", "In Java");
         Main.functionExample.toLowerCaseAndConcatenate("PROGRAMMING", "In Java");
         Main.functionExample.toLowerCaseAndConcatenateWithCompose("PROGRAMMING", "In Java");
+        System.out.println("OBJECT");
+        Main.functionExample.mapOfInstructorsWithNameAndYearsOfExperience();
+        Main.functionExample.mapOfInstructorsWithNameAndYearsOfExperiencePredicate();
         System.out.println("====================");
     }
 }

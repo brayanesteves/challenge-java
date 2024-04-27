@@ -1,6 +1,12 @@
 package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function;
 
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.controller.InstructorController;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.models.Instructor;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class FunctionExample {
     
@@ -30,5 +36,37 @@ public class FunctionExample {
         Function<String, String> concatFunction = (s) -> s.concat(text);
         System.out.println(lowerCaseFunction.compose(concatFunction).apply(value));
     }
+    
+    // <OBJECT> //
+    public void mapOfInstructorsWithNameAndYearsOfExperience() {
+        // Map of instructors with name and years of experience.
+        // Function with will 'List<Instructors>' and return a 'Map<String, Integer>'.
+        Function<List<Instructor>, Map<String, Integer>> mapFunction = (instructors -> {
+            Map<String, Integer> map = new HashMap<>();
+            instructors.forEach(instructor -> {
+                map.put(instructor.getName(), instructor.getYearsOfExperience());
+            });
+            return map;
+        });
+        System.out.println(mapFunction.apply(InstructorController.getAll()));
+    }
+    
+    public void mapOfInstructorsWithNameAndYearsOfExperiencePredicate() {
+        // Map of instructors with name and years of experience.
+        // Function with will 'List<Instructors>' and return a 'Map<String, Integer>'.
+        // Predicate will return 'true' if instructor has online courses.
+        Predicate<Instructor> predicateZero = (i) -> i.isOnlineCourses() == true;
+        Function<List<Instructor>, Map<String, Integer>> mapFunction = (instructors -> {
+            Map<String, Integer> map = new HashMap<>();
+            instructors.forEach(instructor -> {
+                if(predicateZero.test(instructor)) {
+                    map.put(instructor.getName(), instructor.getYearsOfExperience());
+                }                
+            });
+            return map;
+        });
+        System.out.println(mapFunction.apply(InstructorController.getAll()));
+    }
+    // <.OBJECT> //
     
 }
