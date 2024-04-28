@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function.FunctionExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicateandbiconsumer.PredicateAndBiConsumerExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.unaryoperator.BinaryOperatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.unaryoperator.UnaryOperatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.ConcatenateTraditional;
@@ -44,12 +45,14 @@ public class Main {
     private static ConsumerExample consumerExample;
     // PREDICATE. //
     private static PredicateExample predicateExample;
-    // PREDICATE & BICONSUMER //
+    // PREDICATE & BICONSUMER. //
     private static PredicateAndBiConsumerExample predicateAndBiConsumerExample;
-    // FUNCTION //
+    // FUNCTION. //
     private static FunctionExample functionExample;
-    // UNARY OPERATOR //
+    // UNARY OPERATOR. //
     private static UnaryOperatorExample unaryOperatorExample;
+    // BIOPERATOR //
+    private static BinaryOperatorExample binaryOperatorExample;
     // ==================== //
     
     public Main() {
@@ -79,6 +82,8 @@ public class Main {
         functionExample = new FunctionExample();
         // UNARY OPERATOR //
         unaryOperatorExample = new UnaryOperatorExample();
+        // BIOPERATOR //
+        binaryOperatorExample = new BinaryOperatorExample();
         // ==================== //
     }
     
@@ -164,6 +169,14 @@ public class Main {
         Main.unaryOperatorExample.intUnaryOperator(100);
         Main.unaryOperatorExample.longUnaryOperator(10000000000000000L);
         Main.unaryOperatorExample.doubleUnaryOperator(2000000.20000000);
+        System.out.println("BIOPERATOR");
+        Main.binaryOperatorExample.biOperator_Integer(2, 4);
+        Main.binaryOperatorExample.biOperatorWithComparatorMax_Integer(7, 8);
+        Main.binaryOperatorExample.biOperatorWithComparatorMin_Integer(7, 8);
+        System.out.println("INT, LONG & DOUBLE (BINARY OPERATOR)");
+        Main.binaryOperatorExample.intBiOperatorWithComparatorMultiply_Integer(2, 4);
+        Main.binaryOperatorExample.longBiOperatorWithComparatorMultiply_Long(20000000L, 22222222222222222L);
+        Main.binaryOperatorExample.doubleBiOperatorWithComparatorMultiply_Double(2222.22222, 22222222222222.22222);
         System.out.println("====================");
     }
 }
