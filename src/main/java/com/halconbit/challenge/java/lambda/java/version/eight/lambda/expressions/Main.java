@@ -18,6 +18,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.IncrementByFiveTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleTraditional;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.variablesscope.VariablesScopeExample;
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
@@ -63,6 +64,8 @@ public class Main {
     private static MethodReferenceExample methodReferenceExample;
     // CONSTRUCTOR REFERENCE. //
     private static ConstructorReferenceExample constructorReferenceExample;
+    // VARIABLE SCOPE. //
+    private static VariablesScopeExample variablesScopeExample;
     // ==================== //
     
     public Main() {
@@ -100,6 +103,8 @@ public class Main {
         methodReferenceExample = new MethodReferenceExample();
         // CONSTRUCTOR REFERENCE. //
         constructorReferenceExample = new ConstructorReferenceExample();
+        // VARIABLE SCOPE. //
+        variablesScopeExample = new VariablesScopeExample();
         // ==================== //
     }
     
@@ -203,6 +208,9 @@ public class Main {
         Main.methodReferenceExample.convertToMethodReferenceExample();
         System.out.println("CONSTRUCTOR REFERENCE");
         Main.constructorReferenceExample.constructorReference_InstructorFactory("Mike", 10, "Software Developer", "M", true, Arrays.asList("Java Programming", "C++ Programming", "Python Programming"));
+        System.out.println("VARIABLE SCOPE");
+        Main.variablesScopeExample.localVariable_Multiply();
+        Main.variablesScopeExample.localVariable_ObjectInstructor();
         System.out.println("====================");
     }
 }
