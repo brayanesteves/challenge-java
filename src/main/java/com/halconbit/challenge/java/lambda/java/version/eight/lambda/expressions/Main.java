@@ -193,6 +193,8 @@ public class Main {
         Main.methodReferenceExample.methodReference_Predicate();
         Main.methodReferenceExample.methodReference_Function_IntegerDouble();
         Main.methodReferenceExample.methodReference_Function_StringString();
+        System.out.println("CONVERT TO METHOD REFERENCE");
+        Main.methodReferenceExample.convertToMethodReferenceExample();
         System.out.println("====================");
     }
 }
