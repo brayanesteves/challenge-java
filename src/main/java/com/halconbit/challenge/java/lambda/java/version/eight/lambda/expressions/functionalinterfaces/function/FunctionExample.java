@@ -16,6 +16,11 @@ public class FunctionExample {
         System.out.println("Square root of " + value + ":" + sqrt.apply(value));
     }
     
+    public void multiply(int value) {
+        Function<Integer, Integer> function = i -> i * 10;
+        System.out.println(function.apply(value));
+    }
+    
     public void toLowerCase(String value) {
         Function<String, String> lowerCaseFunction = (s) -> s.toLowerCase();
         System.out.println(value + " = " + lowerCaseFunction.apply(value));

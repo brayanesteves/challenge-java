@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function.FunctionExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicateandbiconsumer.PredicateAndBiConsumerExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.unaryoperator.UnaryOperatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.ConcatenateTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.HelloWorldLambda;
@@ -47,6 +48,8 @@ public class Main {
     private static PredicateAndBiConsumerExample predicateAndBiConsumerExample;
     // FUNCTION //
     private static FunctionExample functionExample;
+    // UNARY OPERATOR //
+    private static UnaryOperatorExample unaryOperatorExample;
     // ==================== //
     
     public Main() {
@@ -74,6 +77,8 @@ public class Main {
         predicateAndBiConsumerExample = new PredicateAndBiConsumerExample();
         // FUNCTION //
         functionExample = new FunctionExample();
+        // UNARY OPERATOR //
+        unaryOperatorExample = new UnaryOperatorExample();
         // ==================== //
     }
     
@@ -152,6 +157,13 @@ public class Main {
         Main.functionExample.mapOfInstructorsWithNameAndYearsOfExperiencePredicate();
         System.out.println("BIFUNCTION");
         Main.functionExample.biFunction_TwoInputs();
+        System.out.println("UNARY OPERATOR");
+        Main.unaryOperatorExample.multiply(100);
+        Main.functionExample.multiply(100);
+        System.out.println("INT, LONG & DOUBLE (UNARY)");
+        Main.unaryOperatorExample.intUnaryOperator(100);
+        Main.unaryOperatorExample.longUnaryOperator(10000000000000000L);
+        Main.unaryOperatorExample.doubleUnaryOperator(2000000.20000000);
         System.out.println("====================");
     }
 }
