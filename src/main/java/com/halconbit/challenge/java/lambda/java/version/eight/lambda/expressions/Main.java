@@ -2,6 +2,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.expression
 
 import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.constructorreference.ConstructorReferenceExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.consumer.ConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function.FunctionExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.methodreference.MethodReferenceExample;
@@ -17,6 +18,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.traditional.IncrementByFiveTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleLambda;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.runnable.RunnableExampleTraditional;
+import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -53,12 +55,14 @@ public class Main {
     private static FunctionExample functionExample;
     // UNARY OPERATOR. //
     private static UnaryOperatorExample unaryOperatorExample;
-    // BIOPERATOR //
+    // BIOPERATOR. //
     private static BinaryOperatorExample binaryOperatorExample;
-    // SUPPLIER //
+    // SUPPLIER. //
     private static SupplierExample supplierExample;
-    // METHOD REFERENCE //
+    // METHOD REFERENCE. //
     private static MethodReferenceExample methodReferenceExample;
+    // CONSTRUCTOR REFERENCE. //
+    private static ConstructorReferenceExample constructorReferenceExample;
     // ==================== //
     
     public Main() {
@@ -80,20 +84,22 @@ public class Main {
         sumOfNumberUsingCallable = new SumOfNumberUsingCallable();
         // CONSUMER. //
         consumerExample = new ConsumerExample();
-        // PREDICATE //
+        // PREDICATE. //
         predicateExample = new PredicateExample();
-        // PREDICATE & BICONSUMER //
+        // PREDICATE & BICONSUMER. //
         predicateAndBiConsumerExample = new PredicateAndBiConsumerExample();
-        // FUNCTION //
+        // FUNCTION. //
         functionExample = new FunctionExample();
-        // UNARY OPERATOR //
+        // UNARY OPERATOR. //
         unaryOperatorExample = new UnaryOperatorExample();
-        // BIOPERATOR //
+        // BIOPERATOR. //
         binaryOperatorExample = new BinaryOperatorExample();
-        // SUPPLIER //
+        // SUPPLIER. //
         supplierExample = new SupplierExample();
-        // METHOD REFERENCE //
+        // METHOD REFERENCE. //
         methodReferenceExample = new MethodReferenceExample();
+        // CONSTRUCTOR REFERENCE. //
+        constructorReferenceExample = new ConstructorReferenceExample();
         // ==================== //
     }
     
@@ -195,6 +201,8 @@ public class Main {
         Main.methodReferenceExample.methodReference_Function_StringString();
         System.out.println("CONVERT TO METHOD REFERENCE");
         Main.methodReferenceExample.convertToMethodReferenceExample();
+        System.out.println("CONSTRUCTOR REFERENCE");
+        Main.constructorReferenceExample.constructorReference_InstructorFactory("Mike", 10, "Software Developer", "M", true, Arrays.asList("Java Programming", "C++ Programming", "Python Programming"));
         System.out.println("====================");
     }
 }
