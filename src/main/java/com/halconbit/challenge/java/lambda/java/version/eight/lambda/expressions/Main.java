@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function.FunctionExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicateandbiconsumer.PredicateAndBiConsumerExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.supplier.SupplierExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.unaryoperator.BinaryOperatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.unaryoperator.UnaryOperatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.impl.lambda.ConcatenateLambda;
@@ -53,6 +54,8 @@ public class Main {
     private static UnaryOperatorExample unaryOperatorExample;
     // BIOPERATOR //
     private static BinaryOperatorExample binaryOperatorExample;
+    // SUPPLIER //
+    private static SupplierExample supplierExample;
     // ==================== //
     
     public Main() {
@@ -84,6 +87,8 @@ public class Main {
         unaryOperatorExample = new UnaryOperatorExample();
         // BIOPERATOR //
         binaryOperatorExample = new BinaryOperatorExample();
+        // SUPPLIER //
+        supplierExample = new SupplierExample();
         // ==================== //
     }
     
@@ -177,6 +182,8 @@ public class Main {
         Main.binaryOperatorExample.intBiOperatorWithComparatorMultiply_Integer(2, 4);
         Main.binaryOperatorExample.longBiOperatorWithComparatorMultiply_Long(20000000L, 22222222222222222L);
         Main.binaryOperatorExample.doubleBiOperatorWithComparatorMultiply_Double(2222.22222, 22222222222222.22222);
+        System.out.println("SUPPLIER");
+        Main.supplierExample.supplier_Integer();
         System.out.println("====================");
     }
 }
