@@ -4,6 +4,7 @@ import com.halconbit.challenge.java.lambda.helloworld.HelloWorldTraditional;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.callable.SumOfNumberUsingCallable;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.consumer.ConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.function.FunctionExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.methodreference.MethodReferenceExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicate.PredicateExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.predicateandbiconsumer.PredicateAndBiConsumerExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.supplier.SupplierExample;
@@ -56,6 +57,8 @@ public class Main {
     private static BinaryOperatorExample binaryOperatorExample;
     // SUPPLIER //
     private static SupplierExample supplierExample;
+    // METHOD REFERENCE //
+    private static MethodReferenceExample methodReferenceExample;
     // ==================== //
     
     public Main() {
@@ -89,6 +92,8 @@ public class Main {
         binaryOperatorExample = new BinaryOperatorExample();
         // SUPPLIER //
         supplierExample = new SupplierExample();
+        // METHOD REFERENCE //
+        methodReferenceExample = new MethodReferenceExample();
         // ==================== //
     }
     
@@ -184,6 +189,10 @@ public class Main {
         Main.binaryOperatorExample.doubleBiOperatorWithComparatorMultiply_Double(2222.22222, 22222222222222.22222);
         System.out.println("SUPPLIER");
         Main.supplierExample.supplier_Integer();
+        System.out.println("METHOD REFERENCE");
+        Main.methodReferenceExample.methodReference_Predicate();
+        Main.methodReferenceExample.methodReference_Function_IntegerDouble();
+        Main.methodReferenceExample.methodReference_Function_StringString();
         System.out.println("====================");
     }
 }
