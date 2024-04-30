@@ -20,6 +20,8 @@ public class Main {
         System.out.println("====================");
         System.out.println("STREAM EXAMPLE.");
         Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches();
+        System.out.println("STREAM EXAMPLE (INSIDE STREAM).");
+        Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches();
         System.out.println("====================");
     }
     
