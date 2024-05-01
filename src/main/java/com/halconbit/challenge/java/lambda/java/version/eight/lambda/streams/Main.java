@@ -2,6 +2,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams;
 
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamVsCollectorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 
 public class Main {
     
@@ -10,6 +11,9 @@ public class Main {
     private static StreamExample streamExample;
     // STREAM VS COLLECTOR EXAMPLE. //
     private static StreamVsCollectorExample streamVsCollectorExample;
+    // OPERATIONS. //
+    // map() //
+    private static MapExample mapExample;
     // ==================== //
     
     public Main() {
@@ -18,6 +22,9 @@ public class Main {
         streamExample = new StreamExample();
         // STREAM VS COLLECTOR EXAMPLE. //
         streamVsCollectorExample = new StreamVsCollectorExample();
+        // OPERATIONS. //
+        // map() //
+        mapExample = new MapExample();
         // ==================== //
     }
     
@@ -38,6 +45,10 @@ public class Main {
         Main.streamVsCollectorExample.listNames();
         Main.streamVsCollectorExample.listNames_Stream();
         Main.streamVsCollectorExample.listNames_StreamCollectors();
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("OPERATIONS.");
+        System.out.println("map()");
+        Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
         System.out.println("====================");
     }
     
