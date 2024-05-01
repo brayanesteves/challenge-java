@@ -4,6 +4,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.exa
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamVsCollectorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamsOperationsExample;
 
 public class Main {
     
@@ -17,6 +18,8 @@ public class Main {
     private static MapExample mapExample;
     // flatMap() //
     private static FlatMapExample flatMapExample;
+    // flatMap() //
+    private static StreamsOperationsExample streamsOperationsExample;
     // ==================== //
     
     public Main() {
@@ -30,6 +33,8 @@ public class Main {
         mapExample = new MapExample();
         // flatMap() //
         flatMapExample = new FlatMapExample();
+        // flatMap() //
+        streamsOperationsExample = new StreamsOperationsExample();
         // ==================== //
     }
     
@@ -56,6 +61,20 @@ public class Main {
         Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
         System.out.println("flatMap()");
         Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
+        System.out.println("count()");
+        Main.streamsOperationsExample.count();        
+        System.out.println("count().distinct()");
+        Main.streamsOperationsExample.countDistinct();
+        System.out.println("distinct().count()");
+        Main.streamsOperationsExample.distinct();
+        System.out.println("distinct().sorted()");
+        Main.streamsOperationsExample.distinctSorted();
+        System.out.println("anyMatch()");
+        Main.streamsOperationsExample.anyMatch();
+        System.out.println("allMatch()");
+        Main.streamsOperationsExample.allMatch();
+        System.out.println("noneMatch()");
+        Main.streamsOperationsExample.noneMatch();
         System.out.println("====================");
     }
     
