@@ -26,9 +26,12 @@ public class Main {
         System.out.println("STREAM EXAMPLE.");
         Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches();
         System.out.println("STREAM EXAMPLE (INSIDE STREAM).");
-        Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches();
+        Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches_InsideStream();
+        Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches_InsideStreamDebugging();
         System.out.println("STREAM VS COLLECTOR EXAMPLE.");
-        Main.streamExample.creatingMapOfNamesAndCourseOfInstructorsWhoTeaches();
+        Main.streamVsCollectorExample.listNames();
+        Main.streamVsCollectorExample.listNames_Stream();
+        Main.streamVsCollectorExample.listNames_StreamCollectors();
         System.out.println("====================");
     }
     
