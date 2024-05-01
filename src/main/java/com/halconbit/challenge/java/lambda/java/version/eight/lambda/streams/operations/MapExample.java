@@ -12,8 +12,10 @@ public class MapExample {
         // Return only instructor names from the instructor list.
         List<String> instructorNamesZeroList = InstructorController.getAll().stream().map(Instructor::getName).map(String::toUpperCase).collect(Collectors.toList());
         Set<String> instructorNamesZeroSet   = InstructorController.getAll().stream().map(Instructor::getName).map(String::toUpperCase).collect(Collectors.toSet());
-    
+        
+        System.out.println("With 'List<>'");
         System.out.println(instructorNamesZeroList);
+        System.out.println("With 'Set<>'");
         System.out.println(instructorNamesZeroSet);
     }
     
