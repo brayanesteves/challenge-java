@@ -2,6 +2,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams;
 
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamVsCollectorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 
 public class Main {
@@ -14,6 +15,8 @@ public class Main {
     // OPERATIONS. //
     // map() //
     private static MapExample mapExample;
+    // flatMap() //
+    private static FlatMapExample flatMapExample;
     // ==================== //
     
     public Main() {
@@ -25,6 +28,8 @@ public class Main {
         // OPERATIONS. //
         // map() //
         mapExample = new MapExample();
+        // flatMap() //
+        flatMapExample = new FlatMapExample();
         // ==================== //
     }
     
@@ -48,6 +53,8 @@ public class Main {
         System.out.println("-o-o-o-o-o-o-o-o-");
         System.out.println("OPERATIONS.");
         System.out.println("map()");
+        Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
+        System.out.println("flatMap()");
         Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
         System.out.println("====================");
     }
