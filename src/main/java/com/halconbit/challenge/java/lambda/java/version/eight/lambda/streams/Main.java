@@ -4,6 +4,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.exa
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamVsCollectorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamsOperationsExample;
 
 public class Main {
@@ -18,8 +19,10 @@ public class Main {
     private static MapExample mapExample;
     // flatMap() //
     private static FlatMapExample flatMapExample;
-    // flatMap() //
+    // STREAMS OPERATIONS [count(), count().distinct(), distinct().count(), distinct().sorted(), anyMatch(), allMatch(), noneMatch()]. //
     private static StreamsOperationsExample streamsOperationsExample;
+    // STREAM COMPARATOR. //
+    private static StreamComparatorExample streamComparatorExample;
     // ==================== //
     
     public Main() {
@@ -33,8 +36,10 @@ public class Main {
         mapExample = new MapExample();
         // flatMap() //
         flatMapExample = new FlatMapExample();
-        // flatMap() //
+        // STREAMS OPERATIONS [count(), count().distinct(), distinct().count(), distinct().sorted(), anyMatch(), allMatch(), noneMatch()]. //
         streamsOperationsExample = new StreamsOperationsExample();
+        // STREAM COMPARATOR. //
+        streamComparatorExample = new StreamComparatorExample();
         // ==================== //
     }
     
@@ -60,7 +65,7 @@ public class Main {
         System.out.println("map()");
         Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
         System.out.println("flatMap()");
-        Main.mapExample.returnOnlyInstructorNamesFromTheInstructorList();
+        Main.flatMapExample.getListOfAllTheCoursesWhichInstructorsOffers();
         System.out.println("count()");
         Main.streamsOperationsExample.count();        
         System.out.println("count().distinct()");
@@ -75,6 +80,13 @@ public class Main {
         Main.streamsOperationsExample.allMatch();
         System.out.println("noneMatch()");
         Main.streamsOperationsExample.noneMatch();
+        // Stream Comparator. //
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("STREAM COMPARATOR.");
+        System.out.println("No 'reversed()'");
+        Main.streamComparatorExample.returningAllInstructorsSortedByTheirName();
+        System.out.println("reversed()");
+        Main.streamComparatorExample.returningAllInstructorsSortedByTheirName_Reversed();
         System.out.println("====================");
     }
     
