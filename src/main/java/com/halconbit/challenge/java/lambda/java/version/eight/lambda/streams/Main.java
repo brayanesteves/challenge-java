@@ -2,6 +2,7 @@ package com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams;
 
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.example.StreamVsCollectorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FilterExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
@@ -23,6 +24,8 @@ public class Main {
     private static StreamsOperationsExample streamsOperationsExample;
     // STREAM COMPARATOR. //
     private static StreamComparatorExample streamComparatorExample;
+    // filter() //
+    private static FilterExample filterExample;
     // ==================== //
     
     public Main() {
@@ -40,6 +43,8 @@ public class Main {
         streamsOperationsExample = new StreamsOperationsExample();
         // STREAM COMPARATOR. //
         streamComparatorExample = new StreamComparatorExample();
+        // filter() //
+        filterExample = new FilterExample();
         // ==================== //
     }
     
@@ -80,13 +85,15 @@ public class Main {
         Main.streamsOperationsExample.allMatch();
         System.out.println("noneMatch()");
         Main.streamsOperationsExample.noneMatch();
-        // Stream Comparator. //
         System.out.println("-o-o-o-o-o-o-o-o-");
         System.out.println("STREAM COMPARATOR.");
         System.out.println("No 'reversed()'");
         Main.streamComparatorExample.returningAllInstructorsSortedByTheirName();
         System.out.println("reversed()");
         Main.streamComparatorExample.returningAllInstructorsSortedByTheirName_Reversed();
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("filter()");
+        Main.filterExample.returningInstructorSorted();
         System.out.println("====================");
     }
     
