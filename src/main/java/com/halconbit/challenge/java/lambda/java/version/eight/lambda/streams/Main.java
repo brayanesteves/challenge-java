@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.ope
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamFindAnyAndFirstExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamLimitAndSkipExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMapFilterReduce;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMaxExample;
@@ -41,6 +42,8 @@ public class Main {
     private static StreamMinExample streamMinExample;
     // limit() & skip() //
     private static StreamLimitAndSkipExample streamLimitAndSkipExample;
+    // findAny() & findFisrt() //
+    private static StreamFindAnyAndFirstExample streamFindAnyAndFirstExample;
     // ==================== //
     
     public Main() {
@@ -70,6 +73,8 @@ public class Main {
         streamMinExample = new StreamMinExample();
         // limit() & skip() //
         streamLimitAndSkipExample = new StreamLimitAndSkipExample();
+        // findAny() & findFisrt() //
+        streamFindAnyAndFirstExample = new StreamFindAnyAndFirstExample();
         // ==================== //
     }
     
@@ -149,6 +154,11 @@ public class Main {
         Main.streamLimitAndSkipExample.limit(5);
         System.out.println("skip()");
         Main.streamLimitAndSkipExample.skip(5);
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("findAny()");
+        Main.streamFindAnyAndFirstExample.findAny();
+        System.out.println("findFirst()");
+        Main.streamFindAnyAndFirstExample.findFirst();
         System.out.println("====================");
     }
     
