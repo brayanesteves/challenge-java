@@ -8,6 +8,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.ope
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMapFilterReduce;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMaxExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMinExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamReduceExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamsOperationsExample;
 
@@ -35,6 +36,8 @@ public class Main {
     private static StreamMapFilterReduce streamMapFilterReduce;
     // max() //
     private static StreamMaxExample streamMaxExample;
+    // min() //
+    private static StreamMinExample streamMinExample;
     // ==================== //
     
     public Main() {
@@ -60,6 +63,8 @@ public class Main {
         streamMapFilterReduce = new StreamMapFilterReduce();
         // max() //
         streamMaxExample = new StreamMaxExample();
+        // min() //
+        streamMinExample = new StreamMinExample();
         // ==================== //
     }
     
@@ -128,6 +133,11 @@ public class Main {
         Main.streamMaxExample.maxUsingStreamMaxFunction_ReduceTernarioZero();
         Main.streamMaxExample.maxUsingStreamMaxFunction_OptionalReduceTernarioZero();
         Main.streamMaxExample.maxUsingStreamMaxFunction_OptionalReduceTernarioOne();
+        System.out.println("min()");
+        Main.streamMinExample.minUsingStreamMinFunction_ComparatorTo();
+        Main.streamMinExample.minUsingStreamMinFunction_ReduceTernarioZero();
+        Main.streamMinExample.minUsingStreamMinFunction_OptionalReduceTernarioZero();
+        Main.streamMinExample.minUsingStreamMinFunction_OptionalReduceTernarioOne();
         System.out.println("====================");
     }
     
