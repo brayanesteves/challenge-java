@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.ope
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamReduceExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamsOperationsExample;
 
 public class Main {
@@ -26,6 +27,8 @@ public class Main {
     private static StreamComparatorExample streamComparatorExample;
     // filter() //
     private static FilterExample filterExample;
+    // reduce() //
+    private static StreamReduceExample streamReduceExample;
     // ==================== //
     
     public Main() {
@@ -45,6 +48,8 @@ public class Main {
         streamComparatorExample = new StreamComparatorExample();
         // filter() //
         filterExample = new FilterExample();
+        // reduce() //
+        streamReduceExample = new StreamReduceExample();
         // ==================== //
     }
     
@@ -94,6 +99,13 @@ public class Main {
         System.out.println("-o-o-o-o-o-o-o-o-");
         System.out.println("filter()");
         Main.filterExample.returningInstructorSorted();
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("reduce()");
+        Main.streamReduceExample.reduceSingle_Sum();    
+        Main.streamReduceExample.reduceSingle_Multiply();        
+        Main.streamReduceExample.reduceSingle_SumWithOptional();
+        Main.streamReduceExample.reduceSingle_SumWithOptionalAndGet();        
+        Main.streamReduceExample.reduceSingle_SumWithOptionalAndGetAndConditional();
         System.out.println("====================");
     }
     
