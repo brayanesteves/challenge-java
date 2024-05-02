@@ -1,5 +1,6 @@
 package com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations;
 
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.controller.InstructorController;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -45,6 +46,28 @@ public class StreamReduceExample {
             System.out.println(results.get());            
         }
         
+    }
+    
+    public void reduce_PrintingTheInstructor() {
+        // Printing the instructor who has the highest years of experience.
+        Optional instructor = InstructorController.getAll().stream().reduce((s1, s2) -> {
+            if(s1.getYearsOfExperience() > s2.getYearsOfExperience()) {
+                return s1;
+            } else {
+                return s2;
+            }
+        });
+        if(instructor.isPresent()) {
+            System.out.println(instructor.get());            
+        }
+    }
+    
+    public void reduce_PrintingTheInstructorOperatorTernario() {
+        // Printing the instructor who has the highest years of experience.
+        Optional instructor = InstructorController.getAll().stream().reduce((s1, s2) -> s1.getYearsOfExperience() > s2.getYearsOfExperience() ? s2 : s1);
+        if(instructor.isPresent()) {
+            System.out.println(instructor.get());            
+        }
     }
     
 }

@@ -106,6 +106,8 @@ public class Main {
         Main.streamReduceExample.reduceSingle_SumWithOptional();
         Main.streamReduceExample.reduceSingle_SumWithOptionalAndGet();        
         Main.streamReduceExample.reduceSingle_SumWithOptionalAndGetAndConditional();
+        Main.streamReduceExample.reduce_PrintingTheInstructor();
+        Main.streamReduceExample.reduce_PrintingTheInstructorOperatorTernario();
         System.out.println("====================");
     }
     
