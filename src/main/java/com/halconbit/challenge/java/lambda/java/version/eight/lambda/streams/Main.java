@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.ope
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMapFilterReduce;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamReduceExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamsOperationsExample;
 
@@ -29,6 +30,8 @@ public class Main {
     private static FilterExample filterExample;
     // reduce() //
     private static StreamReduceExample streamReduceExample;
+    // map().filter().reduce() //
+    private static StreamMapFilterReduce streamMapFilterReduce;
     // ==================== //
     
     public Main() {
@@ -50,6 +53,8 @@ public class Main {
         filterExample = new FilterExample();
         // reduce() //
         streamReduceExample = new StreamReduceExample();
+        // map().filter().reduce() //
+        streamMapFilterReduce = new StreamMapFilterReduce();
         // ==================== //
     }
     
@@ -108,6 +113,10 @@ public class Main {
         Main.streamReduceExample.reduceSingle_SumWithOptionalAndGetAndConditional();
         Main.streamReduceExample.reduce_PrintingTheInstructor();
         Main.streamReduceExample.reduce_PrintingTheInstructorOperatorTernario();
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("map().filter().reduce()");
+        Main.streamMapFilterReduce.totalYearsOfExperienceBWInstructors_Sum();
+        Main.streamMapFilterReduce.totalYearsOfExperienceBWInstructors_SumAndInteger();
         System.out.println("====================");
     }
     
