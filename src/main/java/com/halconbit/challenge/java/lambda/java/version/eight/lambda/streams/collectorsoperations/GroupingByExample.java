@@ -28,4 +28,19 @@ public class GroupingByExample {
         return instructorByGender;
     }
     
+    public Map<Integer, List<String>> groupingBy_filtering_ObjectInstructorClassified() {
+        // Grouping by length of string and also checking that the names contains e
+        // and only return those name which has e in it.
+        List<String> name                 = List.of("Syed", "Mike", "Jenny", "Gene", "Rajeev");
+        Map<Integer, List<String>> result = name.stream().collect(Collectors.groupingBy(String::length, Collectors.filtering(s -> s.contains("e"), Collectors.toList())));
+        return result;
+    }
+    
+    public Map<String, List<Instructor>> groupingBy_filtering_ObjectInstructorClassified_Filter() {
+        // Instructor grouping them by 'Senior(>10)' and 'Junior(<10)' and filter them
+        // on online courses.
+        Map<String, List<Instructor>> instructorByExpAndOnline = InstructorController.getAll().stream().collect(Collectors.groupingBy(instructor -> instructor.getYearsOfExperience() > 10 ? "SENIOR" : "JUNIOR", Collectors.filtering(s -> s.isOnlineCourses(), Collectors.toList())));
+        return instructorByExpAndOnline;
+    }
+    
 }
