@@ -6,6 +6,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.ope
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.FlatMapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamLimitAndSkipExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMapFilterReduce;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMaxExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMinExample;
@@ -38,6 +39,8 @@ public class Main {
     private static StreamMaxExample streamMaxExample;
     // min() //
     private static StreamMinExample streamMinExample;
+    // limit() & skip() //
+    private static StreamLimitAndSkipExample streamLimitAndSkipExample;
     // ==================== //
     
     public Main() {
@@ -65,6 +68,8 @@ public class Main {
         streamMaxExample = new StreamMaxExample();
         // min() //
         streamMinExample = new StreamMinExample();
+        // limit() & skip() //
+        streamLimitAndSkipExample = new StreamLimitAndSkipExample();
         // ==================== //
     }
     
@@ -133,11 +138,17 @@ public class Main {
         Main.streamMaxExample.maxUsingStreamMaxFunction_ReduceTernarioZero();
         Main.streamMaxExample.maxUsingStreamMaxFunction_OptionalReduceTernarioZero();
         Main.streamMaxExample.maxUsingStreamMaxFunction_OptionalReduceTernarioOne();
+        System.out.println("-o-o-o-o-o-o-o-o-");
         System.out.println("min()");
         Main.streamMinExample.minUsingStreamMinFunction_ComparatorTo();
         Main.streamMinExample.minUsingStreamMinFunction_ReduceTernarioZero();
         Main.streamMinExample.minUsingStreamMinFunction_OptionalReduceTernarioZero();
         Main.streamMinExample.minUsingStreamMinFunction_OptionalReduceTernarioOne();
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("limit()");
+        Main.streamLimitAndSkipExample.limit(5);
+        System.out.println("skip()");
+        Main.streamLimitAndSkipExample.skip(5);
         System.out.println("====================");
     }
     
