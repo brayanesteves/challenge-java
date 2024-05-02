@@ -7,6 +7,7 @@ import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.ope
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.MapExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamComparatorExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMapFilterReduce;
+import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamMaxExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamReduceExample;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.operations.StreamsOperationsExample;
 
@@ -32,6 +33,8 @@ public class Main {
     private static StreamReduceExample streamReduceExample;
     // map().filter().reduce() //
     private static StreamMapFilterReduce streamMapFilterReduce;
+    // max() //
+    private static StreamMaxExample streamMaxExample;
     // ==================== //
     
     public Main() {
@@ -55,6 +58,8 @@ public class Main {
         streamReduceExample = new StreamReduceExample();
         // map().filter().reduce() //
         streamMapFilterReduce = new StreamMapFilterReduce();
+        // max() //
+        streamMaxExample = new StreamMaxExample();
         // ==================== //
     }
     
@@ -117,6 +122,12 @@ public class Main {
         System.out.println("map().filter().reduce()");
         Main.streamMapFilterReduce.totalYearsOfExperienceBWInstructors_Sum();
         Main.streamMapFilterReduce.totalYearsOfExperienceBWInstructors_SumAndInteger();
+        System.out.println("-o-o-o-o-o-o-o-o-");
+        System.out.println("max()");
+        Main.streamMaxExample.maxUsingStreamMaxFunction_ComparatorTo();
+        Main.streamMaxExample.maxUsingStreamMaxFunction_ReduceTernarioZero();
+        Main.streamMaxExample.maxUsingStreamMaxFunction_OptionalReduceTernarioZero();
+        Main.streamMaxExample.maxUsingStreamMaxFunction_OptionalReduceTernarioOne();
         System.out.println("====================");
     }
     
