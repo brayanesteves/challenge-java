@@ -1,4 +1,4 @@
-package com.halconbit.challenge.java.lambda.java.version.eight.lambda.streams.optional;
+package com.halconbit.challenge.java.lambda.java.version.eight.lambda.optional;
 
 import java.util.Optional;
 
