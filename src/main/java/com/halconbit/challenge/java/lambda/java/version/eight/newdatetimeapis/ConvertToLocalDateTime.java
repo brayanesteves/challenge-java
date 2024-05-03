@@ -19,7 +19,8 @@ public class ConvertToLocalDateTime {
     
     public LocalDate dateSql() {
         this.dateSql = new java.sql.Date(System.currentTimeMillis());
-        return this.localDateTime;
+        this.localDate = this.dateSql.toLocalDate();
+        return this.localDate;
     }
     
 }
