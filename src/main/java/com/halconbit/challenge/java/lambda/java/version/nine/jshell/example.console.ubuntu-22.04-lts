@@ -121,4 +121,126 @@ jshell> Math.sqrt(49)
 $21 ==> 7.0
 |  created scratch variable $21 : double
 
+jshell> // Declarations, expression statements, classes, interface, methods, fileds and imports
+
+jshell> // Package declaration are not not allow.
+
+jshell> /* This is allowed */
+
+jshell> var x = 1;
+x ==> 1
+|  modified variable x : int
+|    update overwrote variable x : int
+
+jshell> var y = 2;
+y ==> 2
+|  created variable y : int
+
+jshell> var z = x + y;
+z ==> 3
+|  created variable z : int
+
+jshell> void sayHelloWorld(String s) { System.out.println(s);}
+|  created method sayHelloWorld(String)
+
+jshell> sayHelloWorld("Hello World");
+Hello World
+
+jshell> /list
+
+   1 : 100 + 300
+   2 : $1
+   3 : 2 + 5
+   5 : x + 2
+   6 : $5
+   7 : System.out.println($5)
+   8 : String greeting = "Hello";
+   9 : greeting.concat(" World")
+  10 : $9.toUpperCase()
+  11 : List<String> names = Arrays.asList("Syed", "Mike", "Jenny");
+  12 : names.sort(Comparator.naturalOrder())
+  13 : names
+  14 : names.sort(Comparator.reverseOrder())
+  15 : names
+  16 : List<String> list = List.of("Syed", "Mike", "Jenny");
+  17 : list.size()
+  18 : list.contains("Syed")
+  19 : Math.random()
+  20 : Math.random()
+  21 : Math.sqrt(49)
+  22 : var x = 1;
+  23 : var y = 2;
+  24 : var z = x + y;
+  25 : void sayHelloWorld(String s) { System.out.println(s);}
+  26 : sayHelloWorld("Hello World");
+
+jshell> /list -all
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+   1 : 100 + 300
+   2 : $1
+   3 : 2 + 5
+   4 : int x = 5;
+   5 : x + 2
+   6 : $5
+   7 : System.out.println($5)
+   8 : String greeting = "Hello";
+  e1 : greeting.c
+   9 : greeting.concat(" World")
+  10 : $9.toUpperCase()
+  e2 : LocalDateTime localDateTime = LocalDateTime();
+  11 : List<String> names = Arrays.asList("Syed", "Mike", "Jenny");
+  12 : names.sort(Comparator.naturalOrder())
+  13 : names
+  14 : names.sort(Comparator.reverseOrder())
+  15 : names
+  e3 : List<String> list = list.of("Syed", "Mike", "Jenny");
+  16 : List<String> list = List.of("Syed", "Mike", "Jenny");
+  17 : list.size()
+  18 : list.contains("Syed")
+  19 : Math.random()
+  20 : Math.random()
+  21 : Math.sqrt(49)
+  22 : var x = 1;
+  23 : var y = 2;
+  24 : var z = x + y;
+  25 : void sayHelloWorld(String s) { System.out.println(s);}
+  26 : sayHelloWorld("Hello World");
+
+jshell> /list 3
+
+   3 : 2 + 5
+
+jshell> /list x y
+
+  22 : var x = 1;
+  23 : var y = 2;
+
+jshell> /1
+100 + 300
+$27 ==> 400
+|  created scratch variable $27 : int
+
+jshell> /drop 1
+|  dropped variable $1
+
+jshell> /drop 2
+
+jshell> /2
+$1
+|  Error:
+|  cannot find symbol
+|    symbol:   variable $1
+|  $1
+|  ^^
+
 jshell> 
