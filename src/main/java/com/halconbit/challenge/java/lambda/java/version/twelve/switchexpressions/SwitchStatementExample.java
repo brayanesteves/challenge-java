@@ -58,5 +58,15 @@ public class SwitchStatementExample {
         };
         return quarter;
     }
+    
+    public void switchsLambdaVoid(String value) {
+        switch (value) {
+            case "JANUARY", "FEBUARY", "MARCH" -> System.out.println("FIRST QUARTER");            
+            case "APRIL", "MAY", "JUNE" -> System.out.println("SECOND QUARTER");
+            case "JULY", "AUGUST", "SEPTEMBER" -> System.out.println("THIRD QUARTER");
+            case "OCTOBER", "NOVEMBER", "DECEMBER" -> System.out.println("FOURTH QUARTER");
+            default -> System.out.println("UNKNOWN QUARTER");
+        }
+    }
 
 }
