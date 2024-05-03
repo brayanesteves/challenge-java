@@ -19,7 +19,7 @@ public class LocalDateTimeExample {
     }
     
     public LocalDateTime localDateTime_of(LocalDate localDate, LocalTime localTime) {
-        return this.localDateTime.of(localDate.now(), localTime.now());
+        return this.localDateTime.of(localDate, localTime);
     }
     
     // <GET> //
