@@ -1,4 +1,4 @@
-package com.halconbit.challenge.java.lambda.java.version.once.lambda;
+package com.halconbit.challenge.java.lambda.java.version.eleven.lambda;
 
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.controller.InstructorController;
 import com.halconbit.challenge.java.lambda.java.version.eight.lambda.expressions.functionalinterfaces.models.Instructor;
