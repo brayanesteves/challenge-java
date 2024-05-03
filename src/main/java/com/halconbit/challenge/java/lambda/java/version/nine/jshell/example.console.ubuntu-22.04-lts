@@ -279,5 +279,102 @@ jshell> /list
   26 : sayHelloWorld("Hello World");
   27 : 100 + 300
 
+jshell> public class Tv {
+   ...>     int size;
+   ...>     String model;
+   ...>     boolean energySaver;
+   ...>     public Tv(int size, String model, boolean energySaver) {
+   ...>         this.size = size;
+   ...>         this.model = model;
+   ...>         this.energySaver = energySaver;
+   ...>     }
+   ...>     public int getSize() {
+   ...>         return this.size;
+   ...>     }
+   ...> }
+|  created class Tv
+
+jshell> Tv tv = new Tv(50, "Samsung", true);
+tv ==> Tv@c038203
+|  created variable tv : Tv
+
+jshell> tv.getSize();
+$30 ==> 50
+|  created scratch variable $30 : int
+
+jshell> /edit Tv
+|  replaced class Tv
+|    update replaced variable tv, reset to null
+|    update overwrote class Tv
+
+jshell> Tv tv = new Tv(50, "Samsung", true);
+tv ==> Tv@2b98378d
+|  modified variable tv : Tv
+|    update overwrote variable tv : Tv
+
+jshell> tv.isEnergySaver();
+$33 ==> true
+|  created scratch variable $33 : boolean
+
+jshell> /help set editor
+|  
+|                                /set editor
+|                                ===========
+|  
+|  Specify the command to launch for the /edit command:
+|  
+|  	/set editor [-retain] [-wait] <command>
+|  
+|  	/set editor [-retain] -default
+|  
+|  	/set editor [-retain] -delete
+|  
+|  Retain the current editor setting for future sessions:
+|  
+|  	/set editor -retain
+|  
+|  Show the command to launch for the /edit command:
+|  
+|  	/set editor
+|  
+|  The <command> is an operating system dependent string.
+|  The <command> may include space-separated arguments (such as flags)
+|  
+|  If the -default option is specified, the built-in default editor will be used.
+|  
+|  If the -delete option is specified, previous settings are ignored -- the editor
+|  settings are initialized as when starting the jshell tool.  Specifically, if there
+|  is a retained setting it is used (unless both -retain and -delete are specified --
+|  which deletes the retained setting), if one of these environment variables is set
+|  it will be used: JSHELLEDITOR, VISUAL, or EDITOR (in that order).  Otherwise the
+|  built-in default editor will be used.
+|  
+|  If <command> is specified, it will be used as the external editor. The <command>
+|  consists of the program and zero or more program arguments.  When <command>
+|  is used, the temporary file to edit will be appended as the last argument.
+|  Normally, edit mode will last until the external editor exits. Some external editors
+|  will exit immediately (for example, if the edit window exists) either external editor
+|  flags should be used to prevent immediate exit, or the -wait option should be used to
+|  prompt the user to indicate when edit mode should end.
+|  
+|  Note: while in edit mode no command inputs are seen.  After leaving edit mode changes
+|  to the edited snippets are not seen.
+|  
+|  When the -retain option is used, the setting will be used in this and future
+|  runs of the jshell tool.
+|  
+|  The form without <command> or options shows the editor setting.
+
+jshell> /edit Tv
+|  Error:
+|  missing return statement
+|  public String model(String model) {
+|                                    ^
+|    update replaced variable tv which cannot be referenced until class Tv is declared
+|    update overwrote class Tv
+
+jshell> /set editor -default
+|  Editor set to: -default
+
 jshell> 
 
