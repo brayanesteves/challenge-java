@@ -243,4 +243,41 @@ $1
 |  $1
 |  ^^
 
+jshell> /**
+   ...> Return: Enter the current line.
+   ...> Left arrow: Move the cursor to the left one character.
+   ...> Right arrow: Move the cursor to the right one character.
+   ...> Ctrl+A: Move the cursor the beginning of the line.
+   ...> Ctrl+E: Move the cursor to the end of the line.
+   ...> Meta+B: Move the cursor to the left one word (LEFT ALT key)
+   ...> **/
+
+jshell> /list
+
+   3 : 2 + 5
+   5 : x + 2
+   6 : $5
+   7 : System.out.println($5)
+   8 : String greeting = "Hello";
+   9 : greeting.concat(" World")
+  10 : $9.toUpperCase()
+  11 : List<String> names = Arrays.asList("Syed", "Mike", "Jenny");
+  12 : names.sort(Comparator.naturalOrder())
+  13 : names
+  14 : names.sort(Comparator.reverseOrder())
+  15 : names
+  16 : List<String> list = List.of("Syed", "Mike", "Jenny");
+  17 : list.size()
+  18 : list.contains("Syed")
+  19 : Math.random()
+  20 : Math.random()
+  21 : Math.sqrt(49)
+  22 : var x = 1;
+  23 : var y = 2;
+  24 : var z = x + y;
+  25 : void sayHelloWorld(String s) { System.out.println(s);}
+  26 : sayHelloWorld("Hello World");
+  27 : 100 + 300
+
 jshell> 
+
