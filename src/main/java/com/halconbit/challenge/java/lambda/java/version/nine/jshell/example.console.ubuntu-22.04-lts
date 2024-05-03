@@ -1,0 +1,124 @@
+C:\Users\nosleep>jshell -v
+|  Welcome to JShell -- Version 17.0.10
+|  For an introduction type: /help intro
+
+jshell> 100 + 300
+$1 ==> 400
+|  created scratch variable $1 : int
+
+jshell> $1
+$1 ==> 400
+|  value of $1 : int
+
+jshell> 2 + 5
+$3 ==> 7
+|  created scratch variable $3 : int
+
+jshell> int x = 5
+x ==> 5
+|  created variable x : int
+
+jshell> x + 2
+$5 ==> 7
+|  created scratch variable $5 : int
+
+jshell> $5
+$5 ==> 7
+|  value of $5 : int
+
+jshell> System.out.println($5)
+7
+
+jshell> String greeting = "Hello"
+greeting ==> "Hello"
+|  created variable greeting : String
+
+jshell> greeting.c
+charAt(                chars()                codePointAt(           
+codePointBefore(       codePointCount(        codePoints()           
+compareTo(             compareToIgnoreCase(   concat(                
+contains(              contentEquals(         
+jshell> greeting.con
+concat(          contains(        contentEquals(   
+jshell> greeting.concat(" World")
+$9 ==> "Hello World"
+|  created scratch variable $9 : String
+
+jshell> $9.to
+toCharArray()   toLowerCase(    toString()      toUpperCase(    
+jshell> $9.toUpperCase()
+$10 ==> "HELLO WORLD"
+|  created scratch variable $10 : String
+
+jshell> /import
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+
+jshell> LocalDateTime localDateTime = LocalDateTime()
+|  Error:
+|  cannot find symbol
+|    symbol:   class LocalDateTime
+|  LocalDateTime localDateTime = LocalDateTime();
+|  ^-----------^
+|  Error:
+|  cannot find symbol
+|    symbol:   method LocalDateTime()
+|  LocalDateTime localDateTime = LocalDateTime();
+|                                ^-----------^
+
+jshell> List<String> names = Arrays.asList("Syed", "Mike", "Jenny");
+names ==> [Syed, Mike, Jenny]
+|  created variable names : List<String>
+
+jshell> names.sort(Comparator.naturalOrder())
+
+jshell> names
+names ==> [Jenny, Mike, Syed]
+|  value of names : List<String>
+
+jshell> names.sort(Comparator.reverseOrder())
+
+jshell> names
+names ==> [Syed, Mike, Jenny]
+|  value of names : List<String>
+
+jshell> List<String> list = list.of("Syed", "Mike", "Jenny");
+|  Error:
+|  illegal static interface method call
+|    the receiver expression should be replaced with the type qualifier 'java.util.List<java.lang.String>'
+|  List<String> list = list.of("Syed", "Mike", "Jenny");
+|                      ^------------------------------^
+
+jshell> List<String> list = List.of("Syed", "Mike", "Jenny");
+list ==> [Syed, Mike, Jenny]
+|  created variable list : List<String>
+
+jshell> list.size()
+$17 ==> 3
+|  created scratch variable $17 : int
+
+jshell> list.contains("Syed")
+$18 ==> true
+|  created scratch variable $18 : boolean
+
+jshell> Math.random()
+$19 ==> 0.007089754280011684
+|  created scratch variable $19 : double
+
+jshell> Math.random()
+$20 ==> 0.1424711617847796
+|  created scratch variable $19 : double
+
+jshell> Math.sqrt(49)
+$21 ==> 7.0
+|  created scratch variable $21 : double
+
+jshell> 
